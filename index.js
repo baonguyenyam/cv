@@ -12,11 +12,11 @@ var urlencoded_body_parser = bodyParser.urlencoded({ extended: true });
 var site = {
 	port: process.env.PORT || 8080,
 	root: './',
-	views: './views'
+	views: './docs'
 }
 app.use(json_body_parser);
 app.use(urlencoded_body_parser);
-app.use('/', express.static(site.root + '/'));
+app.use('/', express.static(site.root + '/docs'));
 
 if (process.env.NODE_ENV !== 'production') {
 	app.locals.pretty = true;
@@ -111,4 +111,4 @@ function PugCom(a, b) {
 	});
 	parseFiles(a, b);
 }
-PugCom(site.root + '/views/cv.pug', site.root + '/views/cv.js')
+PugCom(site.root + '/docs/cv.pug', site.root + '/docs/cv.js')

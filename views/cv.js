@@ -1,1 +1,0 @@
-function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;document.write(BVxGBSVqdx);;
