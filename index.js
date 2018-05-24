@@ -1,17 +1,14 @@
-import express, { Router, static } from "express";
-import compression from "compression";
-import { join } from "path";
-import { json as _json, urlencoded } from "body-parser";
-import { readFile, writeFileSync, readdir, existsSync, mkdirSync, unlinkSync, writeFile, readFileSync, createWriteStream } from "fs";
-import { copySync, move, writeFileSync as _writeFileSync, appendFileSync, copy } from "fs-extra";
-import { createHash } from "crypto";
-import multer, { diskStorage } from "multer";
-import browserSync from "browser-sync";
-import { compile } from "pug";
+var express = require('express');
+var compression = require('compression');
 var app = express();
-var router = Router();
-var json_body_parser = _json();
-var urlencoded_body_parser = urlencoded({ extended: true });
+var router = express.Router();
+var path = require('path');
+var bodyParser = require("body-parser");
+var fs = require('fs');
+var browserSync = require('browser-sync');
+var pug = require('pug');
+var json_body_parser = bodyParser.json();
+var urlencoded_body_parser = bodyParser.urlencoded({ extended: true });
 var site = {
 	port: process.env.PORT || 8080,
 	root: './',
@@ -19,7 +16,7 @@ var site = {
 }
 app.use(json_body_parser);
 app.use(urlencoded_body_parser);
-app.use('/', static(site.root + '/'));
+app.use('/', express.static(site.root + '/'));
 
 if (process.env.NODE_ENV !== 'production') {
 	app.locals.pretty = true;
@@ -38,7 +35,7 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
 	app.listen(site.port, function () {
 		console.log('App listening on port !' + site.port);
-		require("openurl").open("http://localhost:" + site.port + '/index.cv')
+		require("openurl").open("http://localhost:" + site.port + '/index.cb')
 	});
 
 }
@@ -54,7 +51,7 @@ router.get('/', function (req, res) {
 })
 
 app.use('/', router);
-app.use('/index.cv', router);
+app.use('/index.cb', router);
 
 // handling 404 errors
 app.get('*', function (req, res, next) {
@@ -78,7 +75,6 @@ app.use(function (err, req, res, next) {
 });
 
 app.use(compression());
-
 function makeid(e) {
 	var text = "";
 	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -91,15 +87,16 @@ function PugCom(a, b) {
 	var outFileStream, parseFiles, writeToOutput;
 	parseFiles = function (dirname) {
 		var compiled, file, fileContents, filenames, i, pathv, len, results, stats;
-		file = join(dirname)
+		file = path.join(dirname)
 		results = [];
-		fileContents = readFileSync(file, 'utf8');
-		compiled = compile(fileContents, {
+		fileContents = fs.readFileSync(file, 'utf8');
+		compiled = pug.compile(fileContents, {
 			client: true,
 			compileDebug: false,
 			filename: file
 		});
 		writeToOutput(compiled, file.replace('.pug', ''))
+
 		return results;
 	};
 
@@ -109,7 +106,7 @@ function PugCom(a, b) {
 		fnString = fn.toString().replace('function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html +', "var " + id + " = ").replace('return pug_html;}', 'document.write(' + id + ');;')
 		return outFileStream.write(fnString);
 	};
-	outFileStream = createWriteStream(b, {
+	outFileStream = fs.createWriteStream(b, {
 		flags: 'w'
 	});
 	parseFiles(a, b);

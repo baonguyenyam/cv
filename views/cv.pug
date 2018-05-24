@@ -1,1 +1,175 @@
 //- http://zuse.me/
+.container-fluid
+	.row.mt-3.mb-3
+		.col-md-4.col-xl-3
+			.card.bg-light.rounded-0
+				img.card-img-top.rounded-0(src="./img/nguyen.jpg")
+				.card-body.border-top
+					h5.card-title Hire me for $10/hr
+					p.mb-0.text-muted Designer and Developer from Vietnam 
+
+
+			div.list-group.mt-3.rounded-0
+				div.list-group-item.active.rounded-0 Phạm Nguyễn Bảo Nguyên
+				div.list-group-item
+					blockquote.blockquote.mb-0
+						p.mb-0
+							| Tôi từng nghĩ design & coding là sự đam mê để rồi một ngày tôi chợt nhận ra chính là cuộc đời này...
+						footer.blockquote-footer
+							cite(title='Vũ Trung Chi Chúc') Vũ Trung Chi Chúc
+				div.list-group-item.small.rounded-0.text-muted
+					| Tôi là Bảo Nguyên hiện là Full-Stack Developer tại nhiều công ty Nhật, USA, Singapore... Tôi cũng là giảng viên tại FPT. Tôi có hơn 8 năm làm việc trên Single Page Applications (SPA), ứng dụng mobile và website. Tôi có nhiều kinh nghiệm về Design, HTML, SASS, PUG, Ionic, Angular, NodeJS, several version control systems... là tác giả của nhiều sản phẩm phần mềm IT tại VN.
+
+		.col-md-8.col-xl-9.mt-3.mt-md-0
+
+			ul#nguyenTab.nav.nav-tabs(role='tablist')
+				li.nav-item
+					a#home-tab.nav-link.rounded-0.active(data-toggle='tab', href='#about', role='tab', aria-controls='about', aria-selected='true') Tại hạ
+				li.nav-item
+					a#job-tab.nav-link.rounded-0(data-toggle='tab', href='#job', role='tab', aria-controls='job', aria-selected='false') Quá trình làm việc
+				li.nav-item
+					a#skills-tab.nav-link.rounded-0(data-toggle='tab', href='#skills', role='tab', aria-controls='skills', aria-selected='false') Năng lực
+			#nguyenTabContent.tab-content
+				#about.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='about-tab') 
+					h3.mt-3 Kiếp ngại - Cái nghiệp
+					p Làm đâu quận nhất thật xa xôi
+						br 
+						| Cái phận đeo mang cũng đã rồi
+						br 
+						| Nhấp nháp ly cà phê nhạt khói 
+						br 
+						| Mài mò mấy đoạn code thâm môi
+					p Tìm vui đem sống còn thêm đợi
+						br 
+						| Lấy đẹp cho đời chỉ để coi
+						br 
+						| Một xíu anh hào đâu quá nỗi
+						br 
+						| Sao còn ghen tị với mây trời 
+					p
+						cite.text-mute Tự bạch 
+					h3.mt-5 Cafe với tại hạ
+					hr 
+					.row 
+						.col-lg
+							address
+								strong 
+									i.fa.fa-location-arrow.fa-fw.mr-2 
+									| Address
+								br 
+								| 10 Bàu Cát 5 - Tân Bình, HCM
+								br
+								| (+84) 96.96.89.89.3
+								br
+								| (+84) 933.112.900
+						.col-lg
+							address
+								strong 
+									i.fa.fa-envelope.fa-fw.mr-2 
+									| Email
+								br 
+								a(target="_blank" href="mailto:baonguyenyam@gmail.com") baonguyenyam@gmail.com
+						.col-lg
+							address
+								strong 
+									i.fa.fa-globe.fa-fw.mr-2 
+									| Website
+								br 
+								a(target="_blank" href="http://baonguyenyam.github.io/") http://baonguyenyam.github.io/
+					h3.mt-2 Hồ sơ cá nhân tại:
+					.card.rounded-0
+						.card-header
+							| Xem đầy đủ tại
+						.card-body
+							.row 
+								.col-md
+									ul.list-inline 
+										li.list-inline-item
+											a.btn.btn-success(target="_blank" href="https://drive.google.com/file/d/0B1JqovD0ypgHdDJDMHdna3JOYkU/view") 
+												i.fa.fa-eye.fa-fw.mr-2
+												| Resume
+										li.list-inline-item
+											a.btn.btn-success(target="_blank" href="https://drive.google.com/file/d/0B1JqovD0ypgHVHQ5NEtueG1zYWM/view") 
+												i.fa.fa-eye.fa-fw.mr-2
+												| Portfolio
+							.row 
+								.col-md.text-center
+									p 
+										a(target="_blank" href="https://drive.google.com/drive/folders/0B1JqovD0ypgHYXh2Sk5VeTMxaXM") 
+											img.img-fluid(src="./img/Logo-Google-Drive.png", data-toggle="tooltip" data-placement="bottom" title="Link chi tiết")
+									p.mb-0 
+										a(target="_blank" href="https://drive.google.com/drive/folders/0B1JqovD0ypgHYXh2Sk5VeTMxaXM") Link chi tiết 
+								.col-md.text-center
+									p 
+										a(target="_blank" href="https://www.youtube.com/channel/UCDE07F201JtIEP4tdAELtfQ") 
+											img.img-fluid(src="./img/youtube.png", data-toggle="tooltip" data-placement="bottom" title="Link chi tiết")
+									p.mb-0 
+										a(target="_blank" href="https://www.youtube.com/channel/UCDE07F201JtIEP4tdAELtfQ") Link chi tiết 
+					
+
+				#job.tab-pane.fade(role='tabpanel', aria-labelledby='job-tab') 
+					ul.mb-0
+						li Used technologies:
+
+						li HTML5, CSS3, LESS, SASS, jQuery
+						li PHP - Yii2 framework
+						li Twitter Bootstrap 3.x framework
+						li AngularJs 1.x
+						li Sencha ExtJs 5.x, Sencha Touch with Sencha cmd
+						li composer, npm, bower, gruntjs
+						li Control Version System - Git
+
+				#skills.tab-pane.fade(role='tabpanel', aria-labelledby='skills-tab') 
+					.row.align-items-center.mt-2
+						.col-lg-3 
+							p.mb-0 
+								strong DESIGN
+						.col-lg-9
+							.progress.rounded-0
+								.progress-bar(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
+					.row.align-items-center.mt-2
+						.col-lg-3 
+							p.mb-0 
+								strong HTML
+						.col-lg-9
+							.progress.rounded-0
+								.progress-bar(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+					.row.align-items-center.mt-2
+						.col-lg-3 
+							p.mb-0 
+								strong SASS
+						.col-lg-9
+							.progress.rounded-0
+								.progress-bar(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+
+
+
+
+
+
+			//- h3 Personal Experience
+			//- .card.rounded-0
+			//- 	.card-header
+			//- 		| Featured
+			//- 	.card-body
+			//- 		h5.card-title Special title treatment
+			//- 		p.card-text With supporting text below as a natural lead-in to additional content.
+			//- 		a.btn.btn-primary.rounded-0(href='#') Go somewhere
+			//- .progress.rounded-0
+			//- 	.progress-bar(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+
+
+			//- .row
+			//- 	.col-4
+			//- 		#list-tab.list-group(role='tablist')
+			//- 			a#list-home-list.rounded-0.list-group-item.list-group-item-action.active(data-toggle='list', href='#list-home', role='tab', aria-controls='home') Home
+			//- 			a#list-profile-list.rounded-0.list-group-item.list-group-item-action(data-toggle='list', href='#list-profile', role='tab', aria-controls='profile') Profile
+			//- 			a#list-messages-list.rounded-0.list-group-item.list-group-item-action(data-toggle='list', href='#list-messages', role='tab', aria-controls='messages') Messages
+			//- 			a#list-settings-list.rounded-0.list-group-item.list-group-item-action(data-toggle='list', href='#list-settings', role='tab', aria-controls='settings') Settings
+			//- 	.col-8
+			//- 		#nav-tabContent.tab-content
+			//- 			#list-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='list-home-list') ...
+			//- 			#list-profile.tab-pane.fade(role='tabpanel', aria-labelledby='list-profile-list') ...
+			//- 			#list-messages.tab-pane.fade(role='tabpanel', aria-labelledby='list-messages-list') ...
+			//- 			#list-settings.tab-pane.fade(role='tabpanel', aria-labelledby='list-settings-list') ...
+

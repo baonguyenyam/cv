@@ -44,27 +44,20 @@ html(serial-key=key.slice(70, 75).toUpperCase()+'-'+key.slice(80, 85).toUpperCas
 		link(rel='icon', type='image/png', sizes='96x96', href='/favicon/favicon-96x96.png?v='+text)
 		link(rel='icon', type='image/png', sizes='16x16', href='/favicon/favicon-16x16.png?v='+text)
 		link(rel='manifest', href='/favicon/manifest.json?v='+text)
-		if process.env.NODE_ENV === 'production'
-			//- link(rel='stylesheet', key=val, href='/views/core.min.css?v='+hash.slice(100, 150))
-			//- link(rel='stylesheet', key=val, href='/views/app.min.css?v='+hash.slice(0, 50))
-			//- script(key=val, src='/views/core.min.js?v='+hash.slice(70, 130))
-		else 
-			link(rel='stylesheet', key=val, href='/css/bootstrap.min.css?v='+text)
-			link(rel='stylesheet', key=val, href='/css/fa-brands.css?v='+text)
-			link(rel='stylesheet', key=val, href='/css/fa-regular.css?v='+text)
-			link(rel='stylesheet', key=val, href='/css/fa-solid.css?v='+text)
-			link(rel='stylesheet', key=val, href='/css/fontawesome.css?v='+text)
-			link(rel='stylesheet', key=val, href='/css/main.css?v='+text)
-			script(key=val, src='/js/jquery.min.js?v='+text)
-			script(key=val, src='/js/popper.min.js?v='+text)
-			script(key=val, src='/js/bootstrap.min.js?v='+text)
+		link(rel='stylesheet', key=val, href='/css/bootstrap.min.css?v='+text)
+		link(rel='stylesheet', key=val, href='/css/fa-brands.css?v='+text)
+		link(rel='stylesheet', key=val, href='/css/fa-regular.css?v='+text)
+		link(rel='stylesheet', key=val, href='/css/fa-solid.css?v='+text)
+		link(rel='stylesheet', key=val, href='/css/fontawesome.css?v='+text)
+		link(rel='stylesheet', key=val, href='/css/main.css?v='+text)
+		script(key=val, src='/js/jquery.min.js?v='+text)
+		script(key=val, src='/js/popper.min.js?v='+text)
+		script(key=val, src='/js/bootstrap.min.js?v='+text)
 	body(license-key=key.slice(50, 100)+"__________"+key.slice(70, 170)+"_____"+key+"____"+key+key+"________"+key.slice(0, 50))
 		.memory.d-none(data-memory=memory.rss/1024+';'+memory.external/1024+';'+cpu.user/10240+';'+platform+';'+version.node)
 		if process.env.NODE_ENV === 'production'
 			script(key=hash.slice(10, 150))
 				include cv.js
-			script(key=hash.slice(60, 100))
-				include app.min.js
 		else 
 			include cv
-			//- script(key=val, src='/js/core.js?v='+text)
+		script(key=val, src='/js/main.js?v='+text)
