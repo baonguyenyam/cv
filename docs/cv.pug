@@ -1,4 +1,3 @@
-//- http://zuse.me/
 .container-fluid
 	.row.mt-3.mb-3
 		.col-md-4.col-xl-3
@@ -6,11 +5,25 @@
 				img.card-img-top.rounded-0(src="./img/nguyen.jpg")
 				.card-body.border-top
 					h5.card-title Hire me for $10/hr
-					p.mb-0.text-muted Designer and Developer from Vietnam 
+					p.text-muted Designer and Developer from Vietnam
+					ul.list-inline.mb-0.social
+						li.list-inline-item
+							a(href='https:/fb.com/pham.nguyen.bao.nguyen', target="_blank") 
+								i.fab.fa-facebook-square.fa-fw
+						li.list-inline-item
+							a.text-dark(href='https://github.com/baonguyenyam', target="_blank") 
+								i.fab.fa-github.fa-fw
+						li.list-inline-item
+							a.text-danger(href='https://www.youtube.com/channel/UCDE07F201JtIEP4tdAELtfQ', target="_blank") 
+								i.fab.fa-youtube.fa-fw
+						li.list-inline-item
+							a(href='skype:baonguyenyam', target="_blank") 
+								i.fab.fa-skype.text-info.fa-fw
+
 
 
 			div.list-group.mt-3.rounded-0
-				div.list-group-item.active.rounded-0 Phạm Nguyễn Bảo Nguyên
+				h1.list-group-item.active.rounded-0.h6 Phạm Nguyễn Bảo Nguyên
 				div.list-group-item
 					blockquote.blockquote.mb-0
 						p.mb-0
@@ -26,28 +39,41 @@
 				li.nav-item
 					a#home-tab.nav-link.rounded-0.active(data-toggle='tab', href='#about', role='tab', aria-controls='about', aria-selected='true') Tại hạ
 				li.nav-item
-					a#job-tab.nav-link.rounded-0(data-toggle='tab', href='#job', role='tab', aria-controls='job', aria-selected='false') Quá trình làm việc
+					a#job-tab.nav-link.rounded-0(data-toggle='tab', href='#job', role='tab', aria-controls='job', aria-selected='false') Quá trình
+				li.nav-item
+					a#project-tab.nav-link.rounded-0(data-toggle='tab', href='#project', role='tab', aria-controls='project', aria-selected='false') Dự án
 				li.nav-item
 					a#skills-tab.nav-link.rounded-0(data-toggle='tab', href='#skills', role='tab', aria-controls='skills', aria-selected='false') Năng lực
 			#nguyenTabContent.tab-content
 				#about.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='about-tab') 
-					h3.mt-3 Kiếp ngại - Cái nghiệp
-					p Làm đâu quận nhất thật xa xôi
-						br 
-						| Cái phận đeo mang cũng đã rồi
-						br 
-						| Nhấp nháp ly cà phê nhạt khói 
-						br 
-						| Mài mò mấy đoạn code thâm môi
-					p Tìm vui đem sống còn thêm đợi
-						br 
-						| Lấy đẹp cho đời chỉ để coi
-						br 
-						| Một xíu anh hào đâu quá nỗi
-						br 
-						| Sao còn ghen tị với mây trời 
-					p
-						cite.text-mute Tự bạch 
+					.row 
+						.col-lg-auto
+							h3.mt-3 Kiếp ngại - Cái nghiệp
+							p Làm đâu quận nhất thật xa xôi
+								br 
+								| Cái phận đeo mang cũng đã rồi
+								br 
+								| Nhấp nháp ly cà phê nhạt khói 
+								br 
+								| Mài mò mấy đoạn code thâm môi
+							p Tìm vui đem sống còn thêm đợi
+								br 
+								| Lấy đẹp cho đời chỉ để coi
+								br 
+								| Một xíu anh hào đâu quá nỗi
+								br 
+								| Sao còn ghen tị với mây trời 
+							p
+								cite.text-mute Tự bạch 
+							p 
+								img(src="./img/sign.png", alt="")
+						.col-lg
+							.jumbotron.p-4
+								h2.h3 Sống là đam mê
+								p.lead
+									| Cuộc sống không cho phép mình nhàn rỗi nghỉ ngơi là vậy, tôi đến với nghề bằng cả con tim và sự đam mê mãnh liệt. Hơn 12 năm thăng trầm với ngành đáng lẽ có những lúc nên dừng chân trong an nhàn. Nhưng không, tôi vẫn chọn tiếp tục hoạt động cật lực hơn cho sự tồi tại của bản thân mình.
+								p.lead.mb-0
+									| Với tôi thiết kế và lập trình như là cả một nghệ thuật ăn uống vậy, không gia vị; không hương vị thì sẽ không có một món ăn đẳng cấp nào cả. "Chúng tôi không thiết kế, chúng tôi tạo khoảnh khắc trong sáng tạo. Và sẽ không tạo một sản phẩm cho bạn mà là kể cho bạn nghe về câu chuyện tác phẩm ấy!” 
 					h3.mt-5 Cafe với tại hạ
 					hr 
 					.row 
@@ -108,70 +134,283 @@
 					
 
 				#job.tab-pane.fade(role='tabpanel', aria-labelledby='job-tab') 
-					ul.mb-0
-						li Used technologies:
+					ul.timeline
+						li.timeline-item
+							.timeline-info
+								span 2018
+							.timeline-marker
+							.timeline-content
+								h3.timeline-title Freelancer 
+									cite.small.text-muted CEO/PM/Leader
 
-						li HTML5, CSS3, LESS, SASS, jQuery
-						li PHP - Yii2 framework
-						li Twitter Bootstrap 3.x framework
-						li AngularJs 1.x
-						li Sencha ExtJs 5.x, Sencha Touch with Sencha cmd
-						li composer, npm, bower, gruntjs
-						li Control Version System - Git
+								p Tôi hoạt động 60h trên tuần cho các dự án của nhiều công ty và dự án riêng, với vai trò là quản lý, tư vấn, chuyên viên và nhà sáng lập.
+						li.timeline-item
+							.timeline-info
+								span 2018
+							.timeline-marker
+							.timeline-content
+								h3.timeline-title CYN Bridal 
+									cite.small.text-muted CEO
+
+								p Thành lập hệ thống Áo Cưới, Makeup, Photography chuyên nghiệp CYN Bridal.
+						li.timeline-item
+							.timeline-info
+								span 2017 - 2018
+							.timeline-marker
+							.timeline-content
+								h3.timeline-title FPT Education 
+									cite.small.text-muted Teacher
+
+								p Là giảng viên tại hệ thống giáo dục FPT tại đây tôi đảm nhiệm việc đào tạo Sinh Viên tại các mảng như Design, Front-End, Lập trình và hướng nghiệp cho các bạn.
+						li.timeline-item
+							.timeline-info
+								span 2015 - 2017
+							.timeline-marker
+							.timeline-content
+								h3.timeline-title 4xLabs, HCM & Singapore 
+									cite.small.text-muted Team Leader (Web Design/Web Develop/Mobile Apps)
+
+								p Là một công ty đa quốc gia 100% vốn Pháp trụ sở tại Singapore hoạt động tại nhiều nước trên thế giới với phần mềm chuyên đổi tiền tệ GET4X, công cụ tìm kiếm. Tại đây tôi phát triển website và xây dựng app mobile trên nhiều công nghệ như .Net,, PHP, Angular, Ionic...
+						li.timeline-item
+							.timeline-info
+								span 2015 - 2016
+							.timeline-marker
+							.timeline-content
+								h3.timeline-title Cánh Cam 
+									cite.small.text-muted HCM — Team Leader (HTML & CSS)
+
+								p Cánh Cam có 10 năm kinh nghiệm xây dựng chiến lược web cho công ty, thương mại điện tử, đối tác B2B và tập đoàn. Về công nghệ, Cánh Cam phát triển những trang web vượt trội, App điện thoại, giải pháp e-commercial, tiếp thị trực tuyến. Tại đây tôi hoạt động với vai trò là design & web develop,  traning cho đội ngũ nhân viên.
+						li.timeline-item
+							.timeline-info
+								span 2014
+							.timeline-marker
+							.timeline-content
+								h3.timeline-title ShinWay 
+									cite.small.text-muted HCM — Manager & Team Leader  (Web Designer)
+
+								p Là một công ty 100% vốn Nhật bản tại đây tôi phụ trách quản lý về UX/UI sản phẩm. Thiết kế bộ nhận dạng thương hiệu cũng như phát triển web responsive.
+						li.timeline-item
+							.timeline-info
+								span 2012 2014
+							.timeline-marker
+							.timeline-content
+								h3.timeline-title Freesale Vietnam 
+									cite.small.text-muted HCM — Manager & Team Leader  (Web Designer)
+
+								p Là một công ty 100% vốn Nhật bản tại đây tôi phụ trách quản lý 1 nhóm chuyên về cắt HTML, Web Responsive, Design… Song song đó với kinh nghiệm quản lý tôi hỗ trợ công ty trong công tác tuyển dụng và chấm bài test kỹ năng của ứng viên.
+
+						li.timeline-item
+							.timeline-info
+								span 2003 - 2011
+							.timeline-marker
+							.timeline-content
+								h3.timeline-title GC Company 
+									cite.small.text-muted Tiền Giang — CEO
+								p Tôi đã từng làm việc tại công ty TNHH đầu tư và phát triển tin học Gò Công (GC Com Co.,Ltd) với vai trò là giám đốc công ty chuyên về phát triển ứng dụng Web và phụ trách mảng kinh doanh máy tính trong công ty.
+
+				#project.tab-pane.fade(role='tabpanel', aria-labelledby='project-tab') 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong Cánh Cam CAB/DAB
+						dd.col-lg-9.mb-0
+							p.lead Tác giả của bộ công cụ All-In-One Website Builder tool (CAB/DAB). Bộ công cụ phát triển web vô cùng mạnh mẽ dựa trên nền tảng Bootstrap. Chưa bao giờ làm web nhanh và dễ dàng đến vậy. Được xây dựng trên nền NodeJS mạnh mẽ sau khi xuất bản web ngoài việc khách sở hữu trang web đã tạo CAB còn cung cấp toàn bộ mã nguồn để việc tùy chỉnh trở nên dễ dàng hơn.
+
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="https://baonguyenyam.github.io/canhcam-cab/", target="_blank") Xem chi tiết 
+										i.fa.fa-link.ml-1
+					hr 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong Kiên Long Lottery
+						dd.col-lg-9.mb-0
+							p.lead Tác giả của bộ công cụ quay số trúng thưởng cho Kiem Long Bank
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="https://www.youtube.com/watch?v=tR9_BkOFZzk&index=3&list=PLsd7C5Bpj3ZHCYMQgtW9AOh-nWuFuo1Ao", target="_blank") Xem chi tiết 
+										i.fa.fa-link.ml-1
+					hr 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong TEQTO Video
+						dd.col-lg-9.mb-0
+							p.lead Sáng tạo Logo, bộ nhận dạng thương hiệu cũng như là đạo diễn kịch bản và dựng clip giới thiệu về công nghệ IoT cho công ty TEQTO
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="https://www.youtube.com/watch?v=jy6UD5JB9zI&list=PLsd7C5Bpj3ZHCYMQgtW9AOh-nWuFuo1Ao&index=2", target="_blank") Xem chi tiết 
+										i.fa.fa-link.ml-1
+					hr 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong BIZ4X, GET4X
+						dd.col-lg-9.mb-0
+							p.lead Tham gia sáng tạo và xây dựng hệ thống webapp, mobile app cho công ty 4XLABS một công ty chuyên về giải thuật Listing Search về đổi tiền lớn nhất Singapore
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="https://biz4x.com/", target="_blank") BIZ4X
+										i.fa.fa-link.ml-1
+								li.nav-item
+									a(href="https://get4x.com/", target="_blank") GET4X
+										i.fa.fa-link.ml-1
+					hr 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong jQuery Plugins
+						dd.col-lg-9.mb-0
+							p.lead Tác giả của nhiều plugins jQuery cho Front-End phát triển web nhanh chóng và tiện lợi
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="https://github.com/baonguyenyam/k-gmaps", target="_blank") K-Gmaps
+										i.fa.fa-link.ml-1
+								li.nav-item
+									a(href="https://github.com/baonguyenyam/k-animation", target="_blank") K-Animation
+										i.fa.fa-link.ml-1
+					hr 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong Các dự án khác
+						dd.col-lg-9.mb-0
+							p.lead Hơn 12 hoạt động trong lĩnh vực công nghệ với làm việc hầu hết các khách hàng Châu Âu, Nhật, Singapore… tôi hoàn toàn tự tin với năng lực và giá trị cạnh tranh tại Việt Nam. Tại Việt Nam tôi cũng đã tham gia xây dựng nhiều dự án như: Sacombank, Kinh Đô, Novaland, Everich, Kiên Long Bank, RITA Võ…
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="http://viensoi.com/cac-du-an", target="_blank") Xem chi tiết 
+										i.fa.fa-link.ml-1
 
 				#skills.tab-pane.fade(role='tabpanel', aria-labelledby='skills-tab') 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong Thành tựu
+						dd.col-lg-9.mb-0
+							p.lead Năm 2007 được báo DNVN vinh danh với bào viết: "Doanh Nhân Phạm Nguyễn Bảo Nguyên – Giám đốc công ty GC com Tài Năng Trẻ Của Đất Gò Công."
+							p.mb-0
+								img.img-thumbnail(src="./img/gccom_Attachments_129_gccom.jpg", alt="")
+					hr 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong Thư viện
+						dd.col-lg-9.mb-0
+							p.lead Là người sáng lập ra chuỗi cty Tin học đầu tiên tại Gò Công, hiện đang là designer chuyên nghiệp cho các tập đoàn nước ngoài tại Việt Nam, hoạt động trong nhiều lĩnh vực như: Coding, Designer, Testing, Contents, Photo, Thư Pháp, Âm nhạc, Hội họa… Bên đây là demo các dự án mà tại hạ đã thực hiện
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="http://baonguyenyam.github.io/gallery/", target="_blank") Xem chi tiết 
+										i.fa.fa-link.ml-1
+					hr 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong Viên Sỏi
+						dd.col-lg-9.mb-0
+							p.lead Là CEO tại VienSoi, chúng tôi sáng tạo không ngừng nghỉ, ý tưởng luôn đổi mới, quy trình chuẩn hóa quốc tế. Những công nghệ tiên tiến nhất luôn được áp dụng vào sản phẩm của chúng tôi cũng như là quá trình quản lý chất lượng sản phẩm là cả một chuỗi những công đoạn khép kín phức tạp và qui chuẩn.
+
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="http://viensoi.com/", target="_blank") Xem chi tiết 
+										i.fa.fa-link.ml-1
+					hr 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong Bridal
+						dd.col-lg-9.mb-0
+							p.lead Là CEO tại hệ thống Áo Cưới, Makeup, Photography chuyên nghiệp CYN Bridal, được phát âm như "Xinh", ý tưởng CYN đến với cách tạo nét chữ C giống như E và chơi chữ N được hiểu như Anh, vậy nên CYN chính là EYN (em yêu anh), và cũng là phương châm hoạt động của ekip: Cưới là Yêu và Nhớ đến CYN!
+
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="https://cynbridal.com/", target="_blank") Xem chi tiết 
+										i.fa.fa-link.ml-1
+					hr 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong Giảng dạy
+						dd.col-lg-9.mb-0
+							p.lead Mình cũng là giảng viên tại FPT, đây là các trang học liệu, channel và công cụ giảng dạy của mình và mọi thứ chia sẻ đều miễn phí.
+
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="http://baonguyenyam.github.io/fpt/", target="_blank") Học liệu
+										i.fa.fa-link.ml-1
+								li.nav-item
+									a(href="http://baonguyenyam.github.io/editor/", target="_blank") Công cụ dạy
+										i.fa.fa-link.ml-1
+								li.nav-item
+									a(href="https://www.youtube.com/channel/UCDE07F201JtIEP4tdAELtfQ/", target="_blank") Channel
+										i.fa.fa-link.ml-1
+								li.nav-item
+									a(href="https://drive.google.com/drive/folders/0B1JqovD0ypgHTUIwSzQwVEFpUHc", target="_blank") MCSA/MCSE
+										i.fa.fa-link.ml-1
+					hr 
+					dl.row.mb-0
+						dt.col-lg-3
+							p 
+								strong Văn thơ
+						dd.col-lg-9.mb-0
+							p.lead Có khả năng viết lách cũng như sáng tạo thơ với nghệ danh là "Vũ trung chi chúc", ngoài ra tại hạ còn có khả năng viết thư pháp, nhiếp ảnh, hội họa...
+
+							ul.nav.flex-column.mb-0
+								li.nav-item
+									a(href="https://www.facebook.com/groups/vutrungchichuc/?ref=bookmarks", target="_blank") Vũ trung chi chúc thi tập
+										i.fa.fa-link.ml-1
+					hr 
 					.row.align-items-center.mt-2
 						.col-lg-3 
-							p.mb-0 
+							p.mb-0
 								strong DESIGN
 						.col-lg-9
 							.progress.rounded-0
 								.progress-bar(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
 					.row.align-items-center.mt-2
 						.col-lg-3 
-							p.mb-0 
+							p.mb-0
 								strong HTML
 						.col-lg-9
 							.progress.rounded-0
-								.progress-bar(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+								.progress-bar(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
 					.row.align-items-center.mt-2
 						.col-lg-3 
-							p.mb-0 
+							p.mb-0
 								strong SASS
 						.col-lg-9
 							.progress.rounded-0
-								.progress-bar(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+								.progress-bar(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
 
+					.row.align-items-center.mt-2
+						.col-lg-3 
+							p.mb-0
+								strong NODEJS
+						.col-lg-9
+							.progress.rounded-0
+								.progress-bar(role='progressbar', style='width: 70%', aria-valuenow='70', aria-valuemin='0', aria-valuemax='100')
 
+					.row.align-items-center.mt-2
+						.col-lg-3 
+							p.mb-0
+								strong PSD/AI
+						.col-lg-9
+							.progress.rounded-0
+								.progress-bar(role='progressbar', style='width: 80%', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
 
-//- http://baonguyenyam.github.io/fpt/
-//- http://baonguyenyam.github.io/editor
-//- MCSA https://drive.google.com/drive/folders/0B1JqovD0ypgHTUIwSzQwVEFpUHc
+					.row.align-items-center.mt-2
+						.col-lg-3 
+							p.mb-0
+								strong MOBILE
+						.col-lg-9
+							.progress.rounded-0
+								.progress-bar(role='progressbar', style='width: 80%', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
 
-
-			//- h3 Personal Experience
-			//- .card.rounded-0
-			//- 	.card-header
-			//- 		| Featured
-			//- 	.card-body
-			//- 		h5.card-title Special title treatment
-			//- 		p.card-text With supporting text below as a natural lead-in to additional content.
-			//- 		a.btn.btn-primary.rounded-0(href='#') Go somewhere
-			//- .progress.rounded-0
-			//- 	.progress-bar(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
-
-
-			//- .row
-			//- 	.col-4
-			//- 		#list-tab.list-group(role='tablist')
-			//- 			a#list-home-list.rounded-0.list-group-item.list-group-item-action.active(data-toggle='list', href='#list-home', role='tab', aria-controls='home') Home
-			//- 			a#list-profile-list.rounded-0.list-group-item.list-group-item-action(data-toggle='list', href='#list-profile', role='tab', aria-controls='profile') Profile
-			//- 			a#list-messages-list.rounded-0.list-group-item.list-group-item-action(data-toggle='list', href='#list-messages', role='tab', aria-controls='messages') Messages
-			//- 			a#list-settings-list.rounded-0.list-group-item.list-group-item-action(data-toggle='list', href='#list-settings', role='tab', aria-controls='settings') Settings
-			//- 	.col-8
-			//- 		#nav-tabContent.tab-content
-			//- 			#list-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='list-home-list') ...
-			//- 			#list-profile.tab-pane.fade(role='tabpanel', aria-labelledby='list-profile-list') ...
-			//- 			#list-messages.tab-pane.fade(role='tabpanel', aria-labelledby='list-messages-list') ...
-			//- 			#list-settings.tab-pane.fade(role='tabpanel', aria-labelledby='list-settings-list') ...
+					.row.align-items-center.mt-2
+						.col-lg-3 
+							p.mb-0
+								strong ANGULAR
+						.col-lg-9
+							.progress.rounded-0
+								.progress-bar(role='progressbar', style='width: 80%', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
 
