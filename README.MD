@@ -1,0 +1,2 @@
+- Xóa file index.html khi chạy dev
+- Sau khi build xong copy nội dung html vào file index.html
