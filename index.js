@@ -28,7 +28,7 @@ if (process.env.NODE_ENV !== 'production') {
 			online: false,
 			open: true,
 			port: site.port + 1,
-			proxy: 'localhost:' + site.port,
+			proxy: 'localhost:' + site.port + '/index.cb',
 			ui: false
 		});
 	}
