@@ -95,3 +95,14 @@
 .timeline-item:last-child .timeline-content {
   padding-bottom: 0;
 }
+
+@media (min-width: 767px) {
+	.card-columns {
+		column-count: 4;
+	}
+}
+@media (min-width: 911px) {
+	.card-columns {
+		column-count: 5;
+	}
+}

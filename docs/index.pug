@@ -105,10 +105,12 @@ html(serial-key=key.slice(70, 75).toUpperCase()+'-'+key.slice(80, 85).toUpperCas
 		link(rel='stylesheet', key=val, href='./css/fa-regular.css?v='+text)
 		link(rel='stylesheet', key=val, href='./css/fa-solid.css?v='+text)
 		link(rel='stylesheet', key=val, href='./css/fontawesome.css?v='+text)
+		link(rel='stylesheet', key=val, href='./css/jquery.fancybox.min.css?v='+text)
 		link(rel='stylesheet', key=val, href='./css/main.css?v='+text)
 		script(key=val, src='./js/jquery.min.js?v='+text)
 		script(key=val, src='./js/popper.min.js?v='+text)
 		script(key=val, src='./js/bootstrap.min.js?v='+text)
+		script(key=val, src='./js/jquery.fancybox.min.js?v='+text)
 	body(license-key=key.slice(50, 100)+"__________"+key.slice(70, 170)+"_____"+key+"____"+key+key+"________"+key.slice(0, 50))
 		if process.env.NODE_ENV === 'production'
 			script(key=hash.slice(10, 150))
