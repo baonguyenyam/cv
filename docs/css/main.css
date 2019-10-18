@@ -42,3 +42,6 @@ padding-left: 2px;
 		border-top: 1px solid #dee2e6;
 	}
 }
+.texttyping {
+	overflow-x: scroll
+}
