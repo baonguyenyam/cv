@@ -3,6 +3,7 @@ var compression = require('compression');
 var app = express();
 var router = express.Router();
 var path = require('path');
+var request = require("request");
 var bodyParser = require("body-parser");
 var fs = require('fs');
 var browserSync = require('browser-sync');
@@ -37,7 +38,12 @@ if (process.env.NODE_ENV !== 'production') {
 		console.log('App listening on port !' + site.port);
 		require("openurl").open("http://localhost:" + site.port + '/index.cb')
 	});
-
+	request({
+		uri: "http://localhost:8080/index.cb",
+	  }, function(error, response, body) {
+		var htmlContent = body;
+		fs.writeFile('./docs/index.html', htmlContent, (error) => { /* handle error */ });
+	  });
 }
 app.set('view engine', 'pug')
 app.set('views', site.views)
