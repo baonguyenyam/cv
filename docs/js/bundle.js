@@ -46,7 +46,7 @@ document.onkeyup = function (e) {
 	var e = e || window.event;
 	if (e.altKey && e.ctrlKey && e.shiftKey && e.which == 13) {
 		$('body')
-		alert('BAO NGUYEN - 0969689893\nEmail: baonguyenyam@gmail.com\nWeb: baonguyenyam.github.io')
+		alert('BAO NGUYEN - +(1) 682 203 1334\nEmail: baonguyenyam@gmail.com\nWeb: baonguyenyam.github.io')
 		return false;
 	}
 };
