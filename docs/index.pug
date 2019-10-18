@@ -111,6 +111,7 @@ html(serial-key=key.slice(70, 75).toUpperCase()+'-'+key.slice(80, 85).toUpperCas
 		script(key=val, src='./js/jquery.min.js?v='+text)
 		script(key=val, src='./js/popper.min.js?v='+text)
 		script(key=val, src='./js/bootstrap.min.js?v='+text)
+		script(key=val, src='./js/typed.min.js?v='+text)
 		script(key=val, src='./js/jquery.fancybox.min.js?v='+text)
 	body(license-key=key.slice(50, 100)+"__________"+key.slice(70, 170)+"_____"+key+"____"+key+key+"________"+key.slice(0, 50))
 		if process.env.NODE_ENV === 'production'
