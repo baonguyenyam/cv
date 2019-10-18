@@ -43,7 +43,7 @@ padding-left: 2px;
 	}
 }
 .texttyping {
-	overflow-x: scroll
+	overflow-x: auto
 }
 .progress .progress-bar {
 	animation:loadbar 2s ;
