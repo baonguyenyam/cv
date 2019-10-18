@@ -97,3 +97,39 @@ padding-left: 2px;
 		background-position: 0% 50%;
 	}
 }
+[data-fancybox="gallery"] {
+	overflow: hidden;
+	position: relative;
+}
+[data-fancybox="gallery"] img {
+	transition: all .5s ease-in-out;
+}
+[data-fancybox="gallery"]:hover img {
+	transform: scale(1.5);
+}
+.video[data-fancybox="gallery"]:before {
+	content: "\e825";
+	font-family: Linearicons-Free;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,.8);
+    border-radius: 50%;
+    color: #fff;
+    font-size: .8rem;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 999;
+}
