@@ -2,7 +2,26 @@
 	.row.mt-3.mb-3
 		.col-md-4.col-xl-3
 			.card.bg-light.rounded-0
-				img.card-img-top.rounded-0(src="./img/phamnguyenbaonguyen.jpg")
+				#carouselExampleControls.carousel.slide(data-ride="carousel")
+					ol.carousel-indicators
+						li.active(data-target="#carouselExampleControls" data-slide-to="0")
+						li(data-target="#carouselExampleControls" data-slide-to="1")
+						li(data-target="#carouselExampleControls" data-slide-to="2")
+					.carousel-inner
+						.carousel-item.active
+							img.d-block.w-100.card-img-top.rounded-0(src="./img/phamnguyenbaonguyen.jpg")
+						.carousel-item
+							img.d-block.w-100.card-img-top.rounded-0(src="./img/nguyen.jpg")
+						.carousel-item
+							img.d-block.w-100.card-img-top.rounded-0(src="./img/50874084_2591696230857399_4912723621983551488_n.jpg")
+					a.carousel-control-prev(href="#carouselExampleControls" role="button" data-slide="prev")
+						span.carousel-control-prev-icon(aria-hidden="true")
+						span.sr-only Previous
+					a.carousel-control-next(href="#carouselExampleControls" role="button" data-slide="next")
+						span.carousel-control-next-icon(aria-hidden="true")
+						span.sr-only Next
+
+
 				.card-body.border-top
 					h5.card-title baonguyenyam
 					p.text-muted Designer and Developer from Vietnam
@@ -22,17 +41,6 @@
 						li.list-inline-item
 							a.text-dark(href='skype:baonguyenyam', target="_blank")
 								i.fab.fa-skype.fa-fw
-			//- .row.mt-3
-				.col-md
-					ul.nav.nav-justified
-						li.nav-item.pr-1
-							a.btn.btn-success.btn-block(target="_blank" href="https://drive.google.com/file/d/0B1JqovD0ypgHdDJDMHdna3JOYkU/view")
-								i.fa.fa-eye.fa-fw.mr-2
-								| Resume
-						li.nav-item.pl-1
-							a.btn.btn-warning.btn-block(target="_blank" href="https://drive.google.com/file/d/0B1JqovD0ypgHVHQ5NEtueG1zYWM/view")
-								i.fa.fa-eye.fa-fw.mr-2
-								| Portfolio
 
 
 			div.list-group.rounded-0.mt-3
@@ -41,12 +49,54 @@
 					blockquote.blockquote.mb-0
 						p.mb-0
 							| Tôi từng nghĩ design & coding là sự đam mê để rồi một ngày tôi chợt nhận ra chính là cuộc đời này...
-						footer.blockquote-footer
+						//- footer.blockquote-footer
 							cite(title='Vũ Trung Chi Chúc') Vũ Trung Chi Chúc
+				ul.list-group-item.list-group.menunguyen
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-briefcase
+						span Developer at TRE Magazine
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-briefcase
+						span Lecturer at FPT University HCM
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-briefcase
+						span FrontEnd Leader at 4xLabs
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-briefcase
+						span FrontEnd Leader at Canh Cam
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-briefcase
+						span Design Team Leader at Shinway
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-briefcase
+						span Team leader at Freesale Vietnam
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-home
+						span (+1) 682 203 1334
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-map-marker
+						span Fort Worth, Texas
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-heart
+						span Married
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-envelope
+						a(target="_blank" href="mailto:baonguyenyam@gmail.com") baonguyenyam@gmail.com
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-earth
+						a(target="_blank" href="http://baonguyenyam.github.io") baonguyenyam.github.io
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-earth
+						a(target="_blank" href="https://baonguyenyam.github.io/blog") baonguyenyam.github.io/blog
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-earth
+						a(target="_blank" href="https://p2bgravel.com") p2bgravel.com
+					li.list-group-item.d-flex.justify-content-between1.align-items-center
+						i.lnr.lnr-earth
+						a(target="_blank" href="https://nguyen-nguyen.website") nguyen-nguyen.website
+
 				div.list-group-item.small.rounded-0.text-muted
-					| Tôi là Bảo Nguyên hiện là Full-Stack Developer tại nhiều công ty Nhật, USA, Singapore... Tôi cũng là giảng viên tại FPT. Tôi có hơn 8 năm làm việc trên Single Page Applications (SPA), ứng dụng mobile và website. Tôi có nhiều kinh nghiệm về Design, HTML, SASS, PUG, Ionic, Angular, NodeJS, several version control systems... là tác giả của nhiều sản phẩm phần mềm IT tại VN.
-				div.list-group-item.small.rounded-0.text-muted
-						img.img-fluid(src="data:image/png;base64,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", alt="", srcset="")
+					img.img-fluid(src="data:image/png;base64,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", alt="", srcset="")
 
 		.col-md-8.col-xl-9.mt-3.mt-md-0
 
@@ -59,686 +109,16 @@
 					a#project-tab.nav-link.rounded-0(data-toggle='tab', href='#project', role='tab', aria-controls='project', aria-selected='false') Dự án
 				li.nav-item
 					a#skills-tab.nav-link.rounded-0(data-toggle='tab', href='#skills', role='tab', aria-controls='skills', aria-selected='false') Năng lực
+				li.nav-item
+					a#awards-tab.nav-link.rounded-0(data-toggle='tab', href='#awards', role='tab', aria-controls='awards', aria-selected='false') Thành tựu
+				li.nav-item
+					a#portfolio-tab.nav-link.rounded-0(data-toggle='tab', href='#portfolio', role='tab', aria-controls='portfolio', aria-selected='false') Portfolio
 			#nguyenTabContent.tab-content
-				#about.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='about-tab')
-					.row
-						.col-lg-auto
-							h3.mt-3 Kiếp ngại - Cái nghiệp
-							p Làm đâu quận nhất thật xa xôi
-								br
-								| Cái phận đeo mang cũng đã rồi
-								br
-								| Nhấp nháp ly cà phê nhạt khói
-								br
-								| Mài mò mấy đoạn code thâm môi
-							p Tìm vui đem sống còn thêm đợi
-								br
-								| Lấy đẹp cho đời chỉ để coi
-								br
-								| Một xíu anh hào đâu quá nỗi
-								br
-								| Sao còn ghen tị với mây trời
-							p
-								cite.text-mute Tự bạch
-							p
-								img.img-fluid(src="./img/sign.png", style="max-width:280px", alt="")
-						.col-lg
-							.jumbotron.p-4
-								h2.h3 Sống là đam mê
-								p.lead
-									| Cuộc sống không cho phép mình nhàn rỗi nghỉ ngơi là vậy, tôi đến với nghề bằng cả con tim và sự đam mê mãnh liệt. Hơn 12 năm thăng trầm với ngành đáng lẽ có những lúc nên dừng chân trong an nhàn. Nhưng không, tôi vẫn chọn tiếp tục hoạt động cật lực hơn cho sự tồn tại của bản thân mình.
-								p.lead.mb-0
-									| Với tôi thiết kế và lập trình như là cả một nghệ thuật ăn uống vậy, không gia vị; không hương vị thì sẽ không có một món ăn đẳng cấp nào cả. "Chúng tôi không thiết kế, chúng tôi tạo khoảnh khắc trong sáng tạo. Và sẽ không tạo một sản phẩm cho bạn mà là kể cho bạn nghe về câu chuyện tác phẩm ấy!”
-					//- h3.mt-5 Cafe với tại hạ
-					//- hr
-					//- .row
-						.col-lg
-							address
-								strong
-									i.fa.fa-location-arrow.fa-fw.mr-2
-									| Address
-								br
-								| Fort Worth, Hoa Kỳ
-								br
-								| (+1) 862 203 1334
-								br
-								| Tân Bình, HCM
-								br
-								| (+84) 96.96.89.89.3
+				include layout/home.pug
+				include layout/timeline.pug
+				include layout/project.pug
+				include layout/skill.pug
+				include layout/adware.pug
+				include layout/portfolio.pug
 
-						.col-lg
-							address
-								strong
-									i.fa.fa-envelope.fa-fw.mr-2
-									| Email
-								br
-								a(target="_blank" href="mailto:baonguyenyam@gmail.com") baonguyenyam@gmail.com
-						.col-lg
-							address
-								strong
-									i.fa.fa-globe.fa-fw.mr-2
-									| Website
-								br
-								a(target="_blank" href="https://baonguyenyam.github.io/") https://baonguyenyam.github.io/
-								br
-								a(target="_blank" href="https://baonguyenyam.github.io/blog") https://baonguyenyam.github.io/blog
-					.p-3.bg-white.rounded.shadow-sm.card
-						h6.border-bottom.border-gray.pb-2.mb-0 Cafe với tại hạ
-						.media.text-muted.pt-3
-							i.fa.fa-location-arrow.fa-fw.fa-lg.mt-2.mr-2
-							.media-body.border-bottom.border-gray
-								p.mb-1
-									strong.d-block.text-gray-dark @Address
-								.pb-3.mb-0(style="line-height:.9rem")
-									.small.pb-1
-										strong Fort Worth, Hoa Kỳ:
-										| (+1) 682 203 1334
-										br
-									.small
-										strong Sài Gòn, Việt Nam:
-										| (+84) 96 96 89 89 3
-						.media.text-muted.pt-3
-							i.fa.fa-envelope.fa-fw.fa-lg.mt-2.mr-2
-							.media-body.border-bottom.border-gray
-								p.mb-1
-									strong.d-block.text-gray-dark @Email
-								.pb-3.mb-0(style="line-height:.9rem")
-									.small
-										a(target="_blank" href="mailto:baonguyenyam@gmail.com") baonguyenyam@gmail.com
-						.media.text-muted.pt-3
-							i.fa.fa-globe.fa-fw.fa-lg.mt-2.mr-2
-							.media-body
-								p.mb-1
-									strong.d-block.text-gray-dark @Website
-								.pb-3.mb-0(style="line-height:.9rem")
-									.small
-										a(target="_blank" href="https://baonguyenyam.github.io") https://baonguyenyam.github.io
-										br
-										a(target="_blank" href="https://nguyen-nguyen.website") https://nguyen-nguyen.website
-					.card-columns.mt-4.mb-2
-						a.card(data-fancybox="gallery" href="http://baonguyenyam.github.io/img/gallery/img_51.jpg")
-							img.img-thumbnail(src="http://baonguyenyam.github.io/img/gallery/thumb/img_51.jpg", )
-						a.card(data-fancybox="gallery" href="http://baonguyenyam.github.io/img/gallery/img_46.jpg")
-							img.img-thumbnail(src="http://baonguyenyam.github.io/img/gallery/thumb/img_46.jpg", )
-						a.card(data-fancybox="gallery" href="http://baonguyenyam.github.io/img/gallery/img_31.jpg")
-							img.img-thumbnail(src="http://baonguyenyam.github.io/img/gallery/thumb/img_31.jpg", )
-						a.card(data-fancybox="gallery" href="http://baonguyenyam.github.io/img/gallery/img_9.jpg")
-							img.img-thumbnail(src="http://baonguyenyam.github.io/img/gallery/thumb/img_9.jpg", )
-						a.card(data-fancybox="gallery" href="http://baonguyenyam.github.io/img/gallery/img_8.jpg")
-							img.img-thumbnail(src="http://baonguyenyam.github.io/img/gallery/thumb/img_8.jpg", )
-						a.card(data-fancybox="gallery" href="http://baonguyenyam.github.io/img/gallery/img_26.jpg")
-							img.img-thumbnail(src="http://baonguyenyam.github.io/img/gallery/thumb/img_26.jpg", )
-						a.card(data-fancybox="gallery" href="http://baonguyenyam.github.io/img/gallery/img_7.jpg")
-							img.img-thumbnail(src="http://baonguyenyam.github.io/img/gallery/thumb/img_7.jpg", )
-						a.card(data-fancybox="gallery" href="http://baonguyenyam.github.io/img/gallery/img_16.jpg")
-							img.img-thumbnail(src="http://baonguyenyam.github.io/img/gallery/thumb/img_16.jpg", )
-						a.card(data-fancybox="gallery" href="http://baonguyenyam.github.io/img/gallery/img_40.jpg")
-							img.img-thumbnail(src="http://baonguyenyam.github.io/img/gallery/thumb/img_40.jpg", )
-						a.card(data-fancybox="gallery" href="http://baonguyenyam.github.io/img/gallery/img_28.jpg")
-							img.img-thumbnail(src="http://baonguyenyam.github.io/img/gallery/thumb/img_28.jpg", )
-
-
-
-					//- h3.mt-2 Hồ sơ cá nhân tại:
-					//- .card.rounded-0
-						.card-header
-							| Xem đầy đủ tại
-						.card-body
-
-							.row
-								.col-md.text-center
-									p
-										a(target="_blank" href="https://drive.google.com/drive/folders/0B1JqovD0ypgHYXh2Sk5VeTMxaXM")
-											img.img-fluid(src="./img/Logo-Google-Drive.png", data-toggle="tooltip" data-placement="bottom" title="Link chi tiết")
-									p.mb-0
-										a(target="_blank" href="https://drive.google.com/drive/folders/0B1JqovD0ypgHYXh2Sk5VeTMxaXM") Link chi tiết
-								.col-md.text-center
-									p
-										a(target="_blank" href="https://www.youtube.com/channel/UCDE07F201JtIEP4tdAELtfQ")
-											img.img-fluid(src="./img/youtube.png", data-toggle="tooltip" data-placement="bottom" title="Link chi tiết")
-									p.mb-0
-										a(target="_blank" href="https://www.youtube.com/channel/UCDE07F201JtIEP4tdAELtfQ") Link chi tiết
-
-
-				#job.tab-pane.fade(role='tabpanel', aria-labelledby='job-tab')
-					ul.timeline
-						//- li.timeline-item
-							.timeline-info
-								span 2018
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title LOTA Co.,Ltd
-									cite.small.text-muted.ml-1 Đồng sáng lập
-
-								p Là đồng sáng lập công ty LOTA chuyên cung cấp giải pháp IoT, App, Web cho các công ty chuyên ngành công nghệ và phần mềm.
-						li.timeline-item
-							.timeline-info
-								span 07/2019
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title TRE Magazine
-									cite.small.text-muted.ml-1 Web Developer - US
-
-								p TRE Magazine là tờ tạp chí Việt Ngữ lâu đời và lớn nhất tại Hoa Kỳ. Là tờ báo được yêu mến và phát hành rộng rãi nhất tại hải ngoại. TRẺ là tờ báo tiếng Việt đặc sắc, phong phú nội dung, độc đáo về hình thức. Chính vì thế sự tổ chức logic và thân thiện mobile cũng như đa dạng về nội dung là những thách thức lớn nhất đối với dự án này.
-
-								p
-									a(href="https://baotreonline.com/" target="_blank") baotreonline.com
-										|
-										i.fa.fa-external-link-alt.ml-1
-						li.timeline-item
-							.timeline-info
-								span 03/2019
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title P2B Gravel
-									cite.small.text-muted.ml-1 Founder‎ - US
-
-								p Đồng sáng lập công ty P2B Gravel hay còn gọi là Viên Sỏi tại Fort Worth - Texas. P2B Gravel là dịch vụ thiết kế webiste cho người Việt tại Mỹ, chúng tôi chuyên về thiết kế website và cung cấp dịch vụ cập nhật website cho khách hàng tiệm nail, tiệm tóc, nhà hàng, chợ và các dịch vụ khác. Ngoài ra chúng tôi còn thiết kế các ấn phẩm, quảng cáo, business card, bộ nhận dạng thương hiệu, digital marketing và hệ thống booking vô cùng tiện lợi.
-								p
-									a(href="https://p2bgravel.com/" target="_blank") p2bgravel.com
-										|
-										i.fa.fa-external-link-alt.ml-1
-						li.timeline-item
-							.timeline-info
-								span 09/2018
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title NETA Vietnam
-									cite.small.text-muted.ml-1 Founder‎
-
-								p Đồng sáng lập công ty cổ phần NETA Vietnam, NETA VIETNAM tự hào là nhà cung ứng và đào tạo nhân lực CNTT chuyên nghiệp. Mục tiêu của chúng tôi là giúp bạn xây dựng sự nghiệp trong ngành CNTT và đặt nền tảng cho một tương lai vững chắc.
-								p
-									a(href="https://neta.edu.vn" target="_blank") neta.edu.vn
-										|
-										i.fa.fa-external-link-alt.ml-1
-						li.timeline-item
-							.timeline-info
-								span 08/2018
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title Landingpage Vietnam
-									cite.small.text-muted.ml-1 Founder‎
-
-								p Đồng sáng lập Landingpage Vietnam, Landingpage Vietnam cung cấp giải pháp UI/UX hoàn hảo cho khách hàng, xây dựng những website từ nhỏ đến cực lớn, chúng tôi đáp ứng đầy đủ các yêu cầu đến những khách hàng khó tính nhất.
-								p
-									a(href="https://landingpage-vietnam.com" target="_blank") landingpage-vietnam.com
-										|
-										i.fa.fa-external-link-alt.ml-1
-
-
-						li.timeline-item
-							.timeline-info
-								span 07/2018
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title FullStack Vietnam
-									cite.small.text-muted.ml-1 CEO/Founder‎
-
-								p Sáng lập trung tâm Fullstack Vietnam lò đào tạo lập trình viên, designer chuyên nghiệp tại Sài Gòn. Chúng tôi là các chuyên gia uy tín trong lĩnh vực lập trình ứng dụng, thiết kế và sáng tạo.
-								p
-									a(href="https://fullstackvietnam.com/" target="_blank") fullstackvietnam.com
-										|
-										i.fa.fa-external-link-alt.ml-1
-						li.timeline-item
-							.timeline-info
-								span 2018
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title Freelancer
-									cite.small.text-muted.ml-1 CEO/PM/Leader
-
-								p Tôi hoạt động 60h trên tuần cho các dự án của nhiều công ty và dự án riêng, với vai trò là quản lý, tư vấn, chuyên viên và nhà sáng lập.
-						li.timeline-item
-							.timeline-info
-								span 03/2018
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title CYN Bridal
-									cite.small.text-muted.ml-1 CEO
-
-								p Thành lập hệ thống Áo Cưới, Makeup, Photography chuyên nghiệp CYN Bridal.
-						li.timeline-item
-							.timeline-info
-								span 2017 - 2018
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title FPT Education
-									cite.small.text-muted.ml-1 Teacher
-
-								p Là giảng viên tại hệ thống giáo dục FPT tại đây tôi đảm nhiệm việc đào tạo Sinh Viên tại các mảng như Design, Front-End, Lập trình và hướng nghiệp cho các bạn.
-						li.timeline-item
-							.timeline-info
-								span 2015 - 2017
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title 4xLabs, HCM & Singapore
-									cite.small.text-muted.ml-1 Team Leader (Web Design/Web Develop/Mobile Apps)
-
-								p Là một công ty đa quốc gia 100% vốn Pháp trụ sở tại Singapore hoạt động tại nhiều nước trên thế giới với phần mềm chuyên đổi tiền tệ GET4X, công cụ tìm kiếm. Tại đây tôi phát triển website và xây dựng app mobile trên nhiều công nghệ như .Net,, PHP, Angular, Ionic...
-						li.timeline-item
-							.timeline-info
-								span 2015 - 2016
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title Cánh Cam
-									cite.small.text-muted.ml-1 HCM — Team Leader (HTML & CSS)
-
-								p Cánh Cam có 10 năm kinh nghiệm xây dựng chiến lược web cho công ty, thương mại điện tử, đối tác B2B và tập đoàn. Về công nghệ, Cánh Cam phát triển những trang web vượt trội, App điện thoại, giải pháp e-commercial, tiếp thị trực tuyến. Tại đây tôi hoạt động với vai trò là design & web develop,  training cho đội ngũ nhân viên.
-						li.timeline-item
-							.timeline-info
-								span 2014
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title ShinWay
-									cite.small.text-muted.ml-1 HCM — Manager & Team Leader  (Web Designer)
-
-								p Là một công ty 100% vốn Nhật bản tại đây tôi phụ trách quản lý về UX/UI sản phẩm. Thiết kế bộ nhận dạng thương hiệu cũng như phát triển web responsive.
-						li.timeline-item
-							.timeline-info
-								span 2012 2014
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title Freesale Vietnam
-									cite.small.text-muted.ml-1 HCM — Manager & Team Leader  (Web Designer)
-
-								p Là một công ty 100% vốn Nhật bản tại đây tôi phụ trách quản lý 1 nhóm chuyên về cắt HTML, Web Responsive, Design… Song song đó với kinh nghiệm quản lý tôi hỗ trợ công ty trong công tác tuyển dụng và chấm bài test kỹ năng của ứng viên.
-
-						li.timeline-item
-							.timeline-info
-								span 2003 - 2011
-							.timeline-marker
-							.timeline-content
-								h3.timeline-title GC Company
-									cite.small.text-muted.ml-1 Tiền Giang — CEO
-								p Tôi đã từng làm việc tại công ty TNHH đầu tư và phát triển tin học Gò Công (GC Com Co.,Ltd) với vai trò là giám đốc công ty chuyên về phát triển ứng dụng Web và phụ trách mảng kinh doanh máy tính trong công ty.
-
-				#project.tab-pane.fade(role='tabpanel', aria-labelledby='project-tab')
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Cánh Cam CAB/DAB
-								br
-								i.small (Native Script)
-						dd.col-lg-9.mb-0
-							p.lead Tác giả của bộ công cụ All-In-One Website Builder tool (CAB/DAB). Bộ công cụ phát triển web vô cùng mạnh mẽ dựa trên nền tảng Bootstrap. Chưa bao giờ làm web nhanh và dễ dàng đến vậy. Được xây dựng trên nền NodeJS mạnh mẽ sau khi xuất bản web ngoài việc khách sở hữu trang web đã tạo CAB còn cung cấp toàn bộ mã nguồn để việc tùy chỉnh trở nên dễ dàng hơn.
-
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://baonguyenyam.github.io/canhcam-cab/", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://www.youtube.com/watch?v=fF-1K2nj-v8", target="_blank") Xem video
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong FullStack Vietnam
-								br
-								i.small (Education)
-						dd.col-lg-9.mb-0
-							p.lead Hệ thống học trực tuyến FullStack Vietnam. FullStack Vietnam không có định nghĩa dạy học, tại FullStack Vietnam chúng tôi tự hào là tổ chức giáo dục đầu tiên đào tạo theo phương pháp Pair Programing rất hiệu quả, nghĩa là các bạn sẽ được làm việc thực sự chứ không đơn thuần là đi học rồi thôi.
-
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://fullstackvietnam.com/", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://www.youtube.com/watch?v=p9H--Uuwrcg", target="_blank") Xem video
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong K-Board-Task
-								br
-								i.small (NODEJS)
-						dd.col-lg-9.mb-0
-							p.lead Đây là bộ công cụ giúp doanh nghiệp quản lý tác vụ nhanh chóng và đáp ứng được những yêu cầu riêng biệt.
-
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://baonguyenyam.github.io/k-board-task", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Kiên Long Lottery
-								br
-								i.small (NODEJS + .Net)
-						dd.col-lg-9.mb-0
-							p.lead Tác giả của bộ công cụ quay số trúng thưởng cho Kien Long Bank
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://www.youtube.com/watch?v=tR9_BkOFZzk&index=3&list=PLsd7C5Bpj3ZHCYMQgtW9AOh-nWuFuo1Ao", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Liên Á
-								br
-								i.small (NODEJS + .Net)
-						dd.col-lg-9.mb-0
-							p.lead Tác giả của bộ công cụ phối màu online cho Liên Á
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://www.youtube.com/watch?v=cAH9n_zgeqE", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong TEQTO Video
-						dd.col-lg-9.mb-0
-							p.lead Sáng tạo Logo, bộ nhận dạng thương hiệu cũng như là đạo diễn kịch bản và dựng clip giới thiệu về công nghệ IoT cho công ty TEQTO
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://www.youtube.com/watch?v=jy6UD5JB9zI&list=PLsd7C5Bpj3ZHCYMQgtW9AOh-nWuFuo1Ao&index=2", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong P2B Gravel Video
-						dd.col-lg-9.mb-0
-							p.lead Sáng tạo video clip cho khách hàng
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://www.youtube.com/watch?v=MP-unvdxa9Y", target="_blank") Giới thiệu du lịch
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://www.youtube.com/watch?v=UYr9xITMY3k", target="_blank")  P2B Gravel - What we do?
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://www.youtube.com/watch?v=K55dFfPmMqk", target="_blank")  P2B Gravel - Design
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://www.youtube.com/watch?v=n0e8S1sh8q8", target="_blank")  P2B Gravel - Web
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong TRE Magazine
-						dd.col-lg-9.mb-0
-							p.lead Sáng tạo website tin tức, hệ thống Rao Vặt và các thành phần khác trong hệ sinh thái
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://baotreonline.com", target="_blank") Trang tin tức
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://raovat.baotreonline.com", target="_blank") Hệ thống rao vặt
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://timban.baotreonline.com", target="_blank") Tìm bạn bốn phương
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://talent.baotreonline.com", target="_blank") Hệ thống thi thố
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong BIZ4X, GET4X
-								br
-								i.small (Angular TypeScript)
-						dd.col-lg-9.mb-0
-							p.lead Tham gia sáng tạo và xây dựng hệ thống webapp, mobile app cho công ty 4XLABS một công ty chuyên về giải thuật Listing Search về đổi tiền lớn nhất Singapore
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://biz4x.com/", target="_blank") BIZ4X
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://get4x.com/", target="_blank") GET4X
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong XSLT Builder
-						dd.col-lg-9.mb-0
-							p.lead Tạo file XSLT dễ dàng và nhanh chóng, tích hợp HTML Convert.
-
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://canhcam-xslt.herokuapp.com/", target="_blank") XSLT Builder
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong HTML Generators
-						dd.col-lg-9.mb-0
-							p.lead Là bộ công cụ cho các nhà phát triển web HTML và CSS tạo mã code nhanh chóng cũng như cải thiện SEO và trải nghiệm người dùng.
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://canhcam-html.herokuapp.com/", target="_blank") Code Generators
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://canhcam-layout.herokuapp.com/", target="_blank") Layouts Collection
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://canhcam-pattern.herokuapp.com/", target="_blank") Patterns Collection
-										i.fa.fa-link.ml-1
-								//- li.nav-item
-									a(href="https://github.com/baonguyenyam/html-code-tool", target="_blank") Source Code
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong K-SASS-CORE
-						dd.col-lg-9.mb-0
-							p.lead Có rất nhiều mixins được thực hiện bởi các nhà phát triển khác nhau, tuy nhiên để giúp bạn khi làm việc với SASS cực hiệu quả tôi đã viết bộ CORE này từ kinh nghiệm thực tế và đã được nhiều lập trình viên áp dụng, hãy tìm hiểu và sẽ thấy được nhiều thứ khác nữa trong các thư viện mix-in K-SASS-CORE.
-
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://github.com/baonguyenyam/k-sass-core", target="_blank") K-SASS-CORE
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://github.com/baonguyenyam/k-flex", target="_blank") K-FLEX
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://github.com/baonguyenyam/k-lite-task", target="_blank") K-Task
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong jQuery Plugins
-						dd.col-lg-9.mb-0
-							p.lead Tác giả của nhiều plugins jQuery cho Front-End phát triển web nhanh chóng và tiện lợi
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://github.com/baonguyenyam/k-gmaps", target="_blank") K-Gmaps
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://github.com/baonguyenyam/k-animation", target="_blank") K-Animation
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://github.com/baonguyenyam/k-responsive-menu", target="_blank") K-Responsive-Menu
-										i.fa.fa-link.ml-1
-					//- hr
-					//- dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Người Việt
-						dd.col-lg-9.mb-0
-							p.lead Nguoi-Viet.Org với mục đích tạo ra cho bạn một kênh rao vặt trung gian, kết nối người mua với người bán lại với nhau bằng những giao dịch cực kỳ đơn giản, tiện lợi, nhanh chóng, an toàn, mang đến hiệu quả bất ngờ.
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://nguoi-viet.org/", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Tôi là Rác
-						dd.col-lg-9.mb-0
-							p.lead CHÚNG TA CÓ MỘT TRÁI ĐẤT THOI THÓP
-							p Phần còn lại của thế giới (thiên nhiên) có thể tiếp tục sống mà không có chúng ta, nhưng chúng ta không thể tồn tại nếu thiếu đi chúng”.
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://toilarac.com/", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Các dự án khác
-						dd.col-lg-9.mb-0
-							p.lead Hơn 12 hoạt động trong lĩnh vực công nghệ với làm việc hầu hết các khách hàng Châu Âu, Nhật, Singapore… tôi hoàn toàn tự tin với năng lực và giá trị cạnh tranh tại Việt Nam. Tại Việt Nam tôi cũng đã tham gia xây dựng nhiều dự án như: Sacombank, Kinh Đô, Novaland, Everich, Kiên Long Bank, RITA Võ…
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="http://viensoi.com", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-
-				#skills.tab-pane.fade(role='tabpanel', aria-labelledby='skills-tab')
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Thành tựu
-						dd.col-lg-9.mb-0
-							p.lead Năm 2007 được báo DNVN vinh danh với bài viết: "Doanh Nhân Phạm Nguyễn Bảo Nguyên – Giám đốc công ty GC com Tài Năng Trẻ Của Đất Gò Công."
-							p.mb-0
-								img.img-thumbnail(src="./img/gccom_Attachments_129_gccom.jpg", alt="")
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Thư viện
-						dd.col-lg-9.mb-0
-							p.lead Là người sáng lập ra chuỗi cty Tin học đầu tiên tại Gò Công, hiện đang là designer chuyên nghiệp cho các tập đoàn nước ngoài tại Việt Nam, hoạt động trong nhiều lĩnh vực như: Coding, Designer, Testing, Contents, Photo, Thư Pháp, Âm nhạc, Hội họa… Bên đây là demo các dự án mà tại hạ đã thực hiện
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="http://baonguyenyam.github.io/gallery/", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Viên Sỏi
-						dd.col-lg-9.mb-0
-							p.lead Là CEO tại VienSoi, chúng tôi sáng tạo không ngừng nghỉ, ý tưởng luôn đổi mới, quy trình chuẩn hóa quốc tế. Những công nghệ tiên tiến nhất luôn được áp dụng vào sản phẩm của chúng tôi cũng như là quá trình quản lý chất lượng sản phẩm là cả một chuỗi những công đoạn khép kín phức tạp và qui chuẩn.
-
-
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="http://viensoi.com/", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Bridal
-						dd.col-lg-9.mb-0
-							p.lead Là CEO tại hệ thống Áo Cưới, Makeup, Photography chuyên nghiệp CYN Bridal, được phát âm như "Xinh", ý tưởng CYN đến với cách tạo nét chữ C giống như E và chơi chữ N được hiểu như Anh, vậy nên CYN chính là EYN (em yêu anh), và cũng là phương châm hoạt động của ekip: Cưới là Yêu và Nhớ đến CYN!
-
-							p
-								img.img-thumbnail(src="https://cynbridal.com/img/cyn.jpg", alt="")
-
-
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://cynbridal.com/", target="_blank") Xem chi tiết
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Giảng dạy
-						dd.col-lg-9.mb-0
-							p.lead Mình cũng là giảng viên tại FPT, đây là các trang học liệu, channel và công cụ giảng dạy của mình và mọi thứ chia sẻ đều miễn phí.
-
-							p
-								img.img-thumbnail(src="https://neta.edu.vn/ngcms_assets/uploads/2018/09/24059515_1982607211766307_1660517400727037674_o.jpg", alt="")
-
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="http://baonguyenyam.github.io/fpt/", target="_blank") Học liệu
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="http://baonguyenyam.github.io/editor/", target="_blank") Công cụ dạy
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://www.youtube.com/channel/UCDE07F201JtIEP4tdAELtfQ/", target="_blank") Channel
-										i.fa.fa-link.ml-1
-								li.nav-item
-									a(href="https://drive.google.com/drive/folders/0B1JqovD0ypgHTUIwSzQwVEFpUHc", target="_blank") MCSA/MCSE
-										i.fa.fa-link.ml-1
-					hr
-					dl.row.mb-0
-						dt.col-lg-3
-							p
-								strong Văn thơ
-						dd.col-lg-9.mb-0
-							p.lead Có khả năng viết lách cũng như sáng tạo thơ với nghệ danh là "Vũ trung chi chúc", ngoài ra tại hạ còn có khả năng viết thư pháp, nhiếp ảnh, hội họa...
-
-							ul.nav.flex-column.mb-0
-								li.nav-item
-									a(href="https://www.facebook.com/groups/vutrungchichuc/?ref=bookmarks", target="_blank") Vũ trung chi chúc thi tập
-										i.fa.fa-link.ml-1
-					hr
-					.row.align-items-center.mt-2
-						.col-lg-3
-							p.mb-0
-								strong DESIGN
-						.col-lg-9
-							.progress.rounded-0
-								.progress-bar(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
-					.row.align-items-center.mt-2
-						.col-lg-3
-							p.mb-0
-								strong HTML/CSS
-						.col-lg-9
-							.progress.rounded-0
-								.progress-bar(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
-					.row.align-items-center.mt-2
-						.col-lg-3
-							p.mb-0
-								strong SASS/PUG
-						.col-lg-9
-							.progress.rounded-0
-								.progress-bar(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
-
-					.row.align-items-center.mt-2
-						.col-lg-3
-							p.mb-0
-								strong NODEJS/JS
-						.col-lg-9
-							.progress.rounded-0
-								.progress-bar(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
-
-					.row.align-items-center.mt-2
-						.col-lg-3
-							p.mb-0
-								strong PSD/AI
-						.col-lg-9
-							.progress.rounded-0
-								.progress-bar(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
-
-					.row.align-items-center.mt-2
-						.col-lg-3
-							p.mb-0
-								strong MOBILE
-						.col-lg-9
-							.progress.rounded-0
-								.progress-bar(role='progressbar', style='width: 70%', aria-valuenow='70', aria-valuemin='0', aria-valuemax='100')
-					.row.align-items-center.mt-2
-						.col-lg-3
-							p.mb-0
-								strong MCSA/MCSE
-						.col-lg-9
-							.progress.rounded-0
-								.progress-bar(role='progressbar', style='width: 80%', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
-
-					.row.align-items-center.mt-2
-						.col-lg-3
-							p.mb-0
-								strong ANGULAR/REACT
-						.col-lg-9
-							.progress.rounded-0
-								.progress-bar(role='progressbar', style='width: 90%', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
 

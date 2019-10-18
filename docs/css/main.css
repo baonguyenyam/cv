@@ -1,34 +1,51 @@
 @media (min-width: 1200px) {
-	.container-fluid {
-		max-width: 1140px;
-	}
+    .container-fluid {
+        max-width: 1140px;
+    }
+}
+
+.menunguyen {
+    font-size: .8rem;
+    color: #797979;
+}
+
+.menunguyen i {
+    font-size: 1rem;
+    margin-right: 5px;
+    color: #3c3c3c;
+}
+
+.menunguyen .list-group-item {
+    border-radius: 0 !important;
+    border: 0 !important;
+    padding: 3px 0 !important;
 }
 
 .tab-content {
-	border: 1px solid #dee2e6;
-	border-top: 0;
-	padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-top: 0;
+    padding: 1rem;
 }
 
 .nav-tabs .nav-item {
-	margin-right: .15rem;
+    margin-right: .15rem;
 }
 
 .nav-tabs .nav-link {
-	background: #fdfdfd;
-	border-bottom: 1px solid #dee2e6;
+    background: #fdfdfd;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .social i {
-	font-size: 1.5rem
+    font-size: 1.5rem
 }
 
 .timeline {
-	line-height: 1.4em;
-	list-style: none;
-	margin: 0;
-	padding: 1rem;
-	width: 100%;
+    line-height: 1.4em;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
 }
 
 .timeline h1,
@@ -37,102 +54,102 @@
 .timeline h4,
 .timeline h5,
 .timeline h6 {
-	line-height: inherit;
+    line-height: inherit;
 }
 
 .timeline-item {
-	padding-left: 40px;
-	position: relative;
+    padding-left: 40px;
+    position: relative;
 }
 
 .timeline-item:last-child {
-	padding-bottom: 0;
+    padding-bottom: 0;
 }
 
 .timeline-info {
-	font-size: 12px;
-	font-weight: 700;
-	letter-spacing: 3px;
-	margin: 0 0 .5em 0;
-	text-transform: uppercase;
-	white-space: nowrap;
-	color: #d3d3d3
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0 0 .5em 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #d3d3d3
 }
 
 .timeline-marker {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	width: 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15px;
 }
 
 .timeline-marker:before {
-	background: #047afb;
-	border: 3px solid transparent;
-	border-radius: 100%;
-	content: "";
-	display: block;
-	height: 15px;
-	position: absolute;
-	top: 4px;
-	left: 0;
-	width: 15px;
-	transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+    background: #047afb;
+    border: 3px solid transparent;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .timeline-marker:after {
-	content: "";
-	width: 3px;
-	background: #CCD5DB;
-	display: block;
-	position: absolute;
-	top: 24px;
-	bottom: 0;
-	left: 6px;
+    content: "";
+    width: 3px;
+    background: #CCD5DB;
+    display: block;
+    position: absolute;
+    top: 24px;
+    bottom: 0;
+    left: 6px;
 }
 
 .timeline-item:last-child .timeline-marker:after {
-	content: none;
+    content: none;
 }
 
 .timeline-item:not(.period):hover .timeline-marker:before {
-	background: transparent;
-	border: 3px solid #047afb;
+    background: transparent;
+    border: 3px solid #047afb;
 }
 
 .timeline-content {
-	padding-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .timeline-content p:last-child {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .timeline-item:last-child .timeline-content {
-	padding-bottom: 0;
+    padding-bottom: 0;
 }
 
 @media (min-width: 767px) {
-	.card-columns {
-		column-count: 4;
-	}
+    .card-columns {
+        column-count: 4;
+    }
 }
 
 @media (min-width: 911px) {
-	.card-columns {
-		column-count: 5;
-	}
+    .card-columns {
+        column-count: 5;
+    }
 }
 
 #nguyenTab .nav-link {
-	background: #f3f3f3;
+    background: #f3f3f3;
 }
 
 #nguyenTab .nav-link.active {
-	background: #f2f2f2;
-	background: -moz-linear-gradient(top, #f2f2f2 0%, #ffffff 100%);
-	background: -webkit-linear-gradient(top, #f2f2f2 0%, #ffffff 100%);
-	background: linear-gradient(to bottom, #f2f2f2 0%, #ffffff 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#ffffff', GradientType=0);
+    background: #f2f2f2;
+    background: -moz-linear-gradient(top, #f2f2f2 0%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #f2f2f2 0%, #ffffff 100%);
+    background: linear-gradient(to bottom, #f2f2f2 0%, #ffffff 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#ffffff', GradientType=0);
 }
