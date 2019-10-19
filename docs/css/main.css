@@ -70,7 +70,31 @@ padding-left: 2px;
 	  width: 100%;
 	} */
 
-  }
+}
+.bgtrans {
+	background: rgb(93,7,107);
+	background: -moz-radial-gradient(circle, rgba(93,7,107,1) 9%, rgba(121,9,112,1) 22%, rgba(7,154,154,1) 51%, rgba(226,255,0,1) 73%, rgba(255,0,7,1) 100%);
+	background: -webkit-radial-gradient(circle, rgba(93,7,107,1) 9%, rgba(121,9,112,1) 22%, rgba(7,154,154,1) 51%, rgba(226,255,0,1) 73%, rgba(255,0,7,1) 100%);
+	background: radial-gradient(circle, rgba(93,7,107,1) 9%, rgba(121,9,112,1) 22%, rgba(7,154,154,1) 51%, rgba(226,255,0,1) 73%, rgba(255,0,7,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d076b",endColorstr="#ff0007",GradientType=1);
+	color:transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: gradientBG2 8s ease infinite;
+	background-size: 300% 300%;
+}
+.bgtrans2 {
+	background: rgb(0,0,0);
+	background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 28%, rgba(149,149,149,1) 51%, rgba(0,0,0,1) 73%);
+	background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 28%, rgba(149,149,149,1) 51%, rgba(0,0,0,1) 73%);
+	background: linear-gradient(90deg, rgba(0,0,0,1) 28%, rgba(149,149,149,1) 51%, rgba(0,0,0,1) 73%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+	color:transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: gradientBG2 5s ease infinite;
+	background-size: 300% 300%;
+}
 .textgra {
 	font-weight: bold;
     line-height: 1.1rem;
@@ -86,7 +110,41 @@ padding-left: 2px;
 	background-size: 300% 300%;
 }
 
+@keyframes gradientBG2 {
+	0% {
+		background-position: 30% 50%;
+	}
+	50% {
+		background-position: 100% 0%;
+	}
+	100% {
+		background-position: 30% 50%;
+	}
+}
+@-webkit-keyframes gradientBG2 {
+	0% {
+		background-position: 30% 50%;
+	}
+	50% {
+		background-position: 100% 0%;
+	}
+	100% {
+		background-position: 30% 50%;
+	}
+}
+
 @keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@-webkit-keyframes gradientBG {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -194,6 +252,41 @@ padding-left: 2px;
 		opacity: .05;
 		font-weight: 500;
 		font-size: 40px;
+		text-transform: uppercase;
+	}
+}
+.welcome_3,
+.welcome_4 {
+	display: none;
+}
+
+@media (min-width: 1350px) {
+	.welcome_3 {
+		display: block;
+		position: fixed;
+		z-index: -2;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		bottom: 4px;
+		left: -40px;
+		transform: rotate(180deg);
+		opacity: .05;
+		font-weight: 900;
+		font-size: 120px;
+		text-transform: uppercase;
+	}
+	.welcome_4 {
+		display: block;
+		position: fixed;
+		z-index: -1;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		bottom: 40px;
+		left: 40px;
+		transform: rotate(180deg);
+		opacity: .2;
+		font-weight: 900;
+		font-size: 60px;
 		text-transform: uppercase;
 	}
 }
