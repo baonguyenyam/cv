@@ -4,13 +4,16 @@
         "concat": "concat -o ./docs/css/bundle.css ./docs/css/bootstrap.min.css ./docs/css/fa-brands.css  ./docs/css/fa-regular.css  ./docs/css/fa-solid.css ./docs/css/fontawesome.css ./docs/css/linericon.css ./docs/css/jquery.fancybox.min.css ./docs/css/main.css",
         "concatjs": "concat -o ./docs/js/bundle.js ./docs/js/jquery.min.js ./docs/js/popper.min.js  ./docs/js/bootstrap.min.js  ./docs/js/typed.min.js ./docs/js/jquery.fancybox.min.js ./docs/js/main.js",
         "nano": "cssnano ./docs/css/bundle.css ./docs/css/bundle.min.css",
+        "autoprefixer": "autoprefixer-cli -o ./docs/css/bundle.css ./docs/css/bundle.css",
         "nanojs": "uglifyjs ./docs/js/bundle.js -o ./docs/js/bundle.min.js",
         "htmlmin": "html-minifier --collapse-whitespace ./docs/index.html -o ./docs/index.html",
-        "win": "SET \"NODE_ENV=production\" && npm run concat && npm run concatjs && npm run nano && npm run nanojs && node index.js && npm run htmlmin",
-        "build": "NODE_ENV=production node index.js",
+        "win": "SET \"NODE_ENV=production\" && npm run concat && npm run autoprefixer && npm run concatjs && npm run nano && npm run nanojs && node index.js && npm run htmlmin",
+        "build": "NODE_ENV=production && npm run concat && npm run autoprefixer && npm run concatjs && npm run nano && npm run nanojs && node index.js && npm run htmlmin",
         "update": "ncu -u && ncu -u -m bower && npm i && npm i sass node-sass && bower update"
     },
     "dependencies": {
+        "autoprefixer": "^9.6.5",
+        "autoprefixer-cli": "^1.0.0",
         "bootstrap": "4.1.1",
         "concat": "^1.0.3",
         "cssnano": "^4.1.10",
