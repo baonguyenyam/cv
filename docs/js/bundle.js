@@ -64,6 +64,5 @@ var typed = new Typed('.text-replace', {
   $(document).ready(function () {
 	$(".dropdown-menuhehe").on("click", "a", function () {
 		 $('#nguyenTab a[href="#' + $(this).attr("todata") + '"]').tab('show');
-		 console.log($('#nguyenTab a[href="#' + $(this).attr("todata") + '"]'))
 	});
 });
