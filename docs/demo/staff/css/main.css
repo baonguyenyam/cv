@@ -5956,7 +5956,7 @@ button.bg-dark:focus {
 .rounded-pill {
   border-radius: 50rem !important; }
 
-.rounded-0 {
+ {
   border-radius: 0 !important; }
 
 .clearfix::after {

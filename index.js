@@ -24,7 +24,8 @@ if (process.env.NODE_ENV !== 'production') {
 	app.listen(site.port, listening);
 	function listening() {
 		browserSync({
-			files: [site.root + '/**/*.{js,css}'],
+			watch: true,
+			files: [site.root + '/**/*.{js,css,pug}'],
 			notify: false,
 			online: false,
 			open: true,
