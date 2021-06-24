@@ -29,6 +29,7 @@ $(document).ready(function () {
 			$('html, body').animate({
 				scrollTop: $("#viewcontent").offset().top - 80
 			}, 100);
+			$('#nguyentopBar button').trigger('click')
 		})
 	});
 });

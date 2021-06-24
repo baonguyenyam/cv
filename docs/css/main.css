@@ -572,6 +572,11 @@ body {
 #mobileMenuIcon .dropdown-menu .dropdown-item {
 	background-color: #ffffff;
 }
-#nguyentopBar {
-
+body {
+	padding-top: 56px;
+}
+@media (min-width: 992px) {
+	body {
+		padding-top: 0;
+	}
 }
