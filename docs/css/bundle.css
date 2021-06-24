@@ -90,14 +90,14 @@ b, strong {
 	width: 100%
 }
 
-.timeline h1,
+/* .timeline h1,
 .timeline h2,
 .timeline h3,
 .timeline h4,
 .timeline h5,
 .timeline h6 {
 	line-height: inherit
-}
+} */
 
 .timeline-item {
 	padding-left: 40px;
