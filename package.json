@@ -1,8 +1,8 @@
 {
     "scripts": {
         "start": "node index.js",
-        "concat": "concat -o ./docs/css/bundle.css ./docs/css/bootstrap.min.css ./docs/css/fa-brands.css  ./docs/css/fa-regular.css  ./docs/css/fa-solid.css ./docs/css/fontawesome.css ./docs/css/linericon.css ./docs/css/jquery.fancybox.min.css ./docs/css/main.css",
-        "concatjs": "concat -o ./docs/js/bundle.js ./docs/js/jquery.min.js ./docs/js/popper.min.js  ./docs/js/bootstrap.min.js  ./docs/js/typed.min.js ./docs/js/jquery.fancybox.min.js ./docs/js/main.js",
+        "concat": "concat -o ./docs/css/bundle.css ./docs/css/bootstrap.min.css ./docs/css/fa-brands.css  ./docs/css/fa-regular.css  ./docs/css/fa-solid.css ./docs/css/fontawesome.css ./docs/css/linericon.css ./docs/css/jquery.fancybox.min.css ./docs/css/chat.css ./docs/css/main.css",
+        "concatjs": "concat -o ./docs/js/bundle.js ./docs/js/jquery.min.js ./docs/js/popper.min.js  ./docs/js/bootstrap.min.js  ./docs/js/typed.min.js ./docs/js/jquery.fancybox.min.js ./docs/js/domChange.js ./docs/js/domReady.js ./docs/js/encode.js ./docs/js/chat.js ./docs/js/main.js",
         "nano": "cssnano ./docs/css/bundle.css ./docs/css/bundle.min.css",
         "autoprefixer": "autoprefixer-cli -o ./docs/css/bundle.css ./docs/css/bundle.css",
         "nanojs": "uglifyjs ./docs/js/bundle.js -o ./docs/js/bundle.min.js",
