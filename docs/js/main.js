@@ -5,7 +5,7 @@ document.onkeyup = function (e) {
 	var e = e || window.event;
 	if (e.altKey && e.ctrlKey && e.shiftKey && e.which == 13) {
 		$('body')
-		alert('BAO NGUYEN - +(1) 682 203 1334\nEmail: baonguyenyam@gmail.com\nWeb: baonguyenyam.github.io')
+		alert('NGUYEN PHAM - +(1) 682 203 1334\nEmail: baonguyenyam@gmail.com\nWeb: baonguyenyam.github.io')
 		return false;
 	}
 };
@@ -13,7 +13,7 @@ $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 })
 var typed = new Typed('.text-replace', {
-	strings: ["<span class='main'>print</span><span class='text3'>('Hello, I am Bao Nguyen!')</span> ^500 <br><span class='main'>workingOn</span><span class='text3'>('Js, Sass, WordPress, PHP, TypeScript, Ps, Ai...')</span> ^500 <br><span class='include'>let</span> sessions <span class='text3'>=</span> <span class='main2'>100</span> ^500 <br><span class='include'>let</span> skillsEngineers <span class='text3'>=</span> <span class='main2'>'90%'</span> ^500 <br><span class='include'>let</span> labs <span class='text3'>=</span> <span class='text2'>handsOn</span> ^500 <br><span class='include'>let</span> scholarships <span class='text3'>=</span> <span class='text2'>available</span> ^500 <br><span class='include'>let</span> date <span class='text3'>=</span> <span class='main'>'Aug 16-08-83'</span> ^500 <br><span class='include'>let</span> location <span class='text3'>=</span> <span class='text2'>\"Fort Worth, Texas\"</span> ^500 <br><span class='include'>let</span> Companies <span class='text3'>></span> <span class='text2'>6</span><br><br><a href='//baonguyenyam.github.io' target='_blank'>readMore();</a><br>..."],
+	strings: ["<span class='main'>print</span><span class='text3'>('Hello, I am Nguyen Pham!')</span> ^500 <br><span class='main'>workingOn</span><span class='text3'>('Js, Sass, WordPress, PHP, TypeScript, Ps, Ai...')</span> ^500 <br><span class='include'>let</span> projects <span class='text3'>></span> <span class='main2'>100</span> ^500 <br><span class='include'>let</span> skillsEngineers <span class='text3'>≈</span> <span class='main2'>'90%'</span> ^500 <br><span class='include'>let</span> labs <span class='text3'>=</span> <span class='text2'>handsOn</span> ^500 <br><span class='include'>let</span> hire <span class='text3'>=</span> <span class='text2'>available</span> ^500 <br><span class='include'>let</span> DOB <span class='text3'>=</span> <span class='main'>'Aug 16-1983'</span> ^500 <br><span class='include'>let</span> location <span class='text3'>=</span> <span class='text2'>\"Fort Worth, Texas\"</span> ^500 <br><span class='include'>let</span> Companies <span class='text3'>></span> <span class='text2'>6</span><br><br><a class='text-white' href='//baonguyenyam.github.io' target='_blank'>readMore();</a><br>..."],
 	typeSpeed: 20,
 	backDelay: 50000,
 	loop: true,
