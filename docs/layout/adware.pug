@@ -1,16 +1,52 @@
 #awards.tab-pane.fade(role='tabpanel', aria-labelledby='awards-tab')
-	dl.row.mb-0.mt-3
-		dt.col-lg-3
-			p
-				strong Thành tựu
-		dd.col-lg-9.mb-0
-			p.lead Năm 2007 được báo DNVN vinh danh với bài viết: "Doanh Nhân Phạm Nguyễn Bảo Nguyên – Giám đốc công ty GC com Tài Năng Trẻ Của Đất Gò Công."
-			p.mb-0
-				img.img-thumbnail(src="./img/gccom_Attachments_129_gccom.jpg", alt="")
-	hr
-	dl.row.mb-0
-		dt.col-lg-3
-			p
-				strong Cộng đồng
-		dd.col-lg-9.mb-0
-			p.lead Là người sáng lập ra chuỗi cty Tin học đầu tiên tại Gò Công cũng là người sáng tạo ra diễn đàn kythuatvien.com phục vụ cộng đồng, trang web đã có hơn 100.000 thành viên tham gia - một con số rất lớn thời điểm đó.
+	h3.mt-3.mb-3 About me
+	.border-top.pt-3.mt-3
+		.media.border-bottom.mb-3
+			span.h3.mr-4.mt-1.d-none.d-md-block
+				img.rounded(src="./img/313951.jpg", style="width:96px", alt="")
+			.media-body
+				h5.d-block Cuộc sống tại Hoa Kỳ
+				p.text-dark.text-sm Tôi đến Hoa Kỳ 2019 và bắt đầu làm việc 3 tháng sau đó. Công việc đầu tiên của tôi là xây dựng 1 business cho mình tại P2B Gravel. Sau đó tôi làm việc cho tờ báo lớn nhất của người Việt tại US - TRẺ Magazine. Tại đây tôi xây dựng toàn bộ hệ thống website và server, SEO và Social media cho doanh nghiệp.
+		.media
+			span.h3.mr-4.mt-1.d-none.d-md-block
+				img.rounded(src="./img/rough_guide.jpg", style="width:96px" alt="")
+			.media-body
+				h5.d-block Cuộc sống tại Việt Nam
+				p.text-dark.text-sm Trước 2019 tôi là Full-Stack Developer tại nhiều công ty Nhật, USA, Singapore... Tôi cũng là giảng viên tại trường chuyên đào tạo công nghệ thông tin FPT. Tôi có hơn 10 năm làm việc trên Single Page Applications (SPA), ứng dụng mobile và website. Tôi có nhiều kinh nghiệm về Design, Sáng tạo thương hiệu, SEO, HTML, SASS, PUG, Ionic, Angular, NodeJS, several version control systems... là tác giả của nhiều sản phẩm phần mềm IT tại VN.
+	#carouselAboutControls.carousel.slide.mt-3(data-ride="carousel")
+		ol.carousel-indicators
+			li.active(data-target="#carouselAboutControls" data-slide-to="0")
+			li(data-target="#carouselAboutControls" data-slide-to="1")
+			li(data-target="#carouselAboutControls" data-slide-to="2")
+		.carousel-inner
+			.carousel-item.active
+				img.d-block.w-100.card-img-top(src="./img/51626401_2615848898442132_4726232302290468864_n.jpg")
+			.carousel-item
+				img.d-block.w-100.card-img-top(src="./img/46456404_2487502751276748_4193726584596725760_n.jpg")
+			.carousel-item
+				img.d-block.w-100.card-img-top(src="./img/25358369_900698640086053_8610895736880707394_o.jpg")
+			.carousel-item
+				img.d-block.w-100.card-img-top(src="./img/38419283_2316555411704817_4861662430838652928_n.jpg")
+		a.carousel-control-prev(href="#carouselAboutControls" role="button" data-slide="prev")
+			span.carousel-control-prev-icon(aria-hidden="true")
+			span.sr-only Previous
+		a.carousel-control-next(href="#carouselAboutControls" role="button" data-slide="next")
+			span.carousel-control-next-icon(aria-hidden="true")
+			span.sr-only Next
+	h3.mt-5.mb-3 Achievements
+	.border-top.pt-3.mt-3
+		dl.row.mb-0.mt-3
+			dt.col-lg-3
+				p
+					strong Thành tựu
+			dd.col-lg-9.mb-0
+				p.lead Năm 2007 được báo DNVN vinh danh với bài viết: "Doanh Nhân Phạm Nguyễn Bảo Nguyên – Giám đốc công ty GC com Tài Năng Trẻ Của Đất Gò Công."
+				p.mb-0
+					img.img-thumbnail(src="./img/gccom_Attachments_129_gccom.jpg", alt="")
+		hr
+		dl.row.mb-0
+			dt.col-lg-3
+				p
+					strong Cộng đồng
+			dd.col-lg-9.mb-0
+				p.lead Là người sáng lập ra chuỗi cty Tin học đầu tiên tại Gò Công cũng là người sáng tạo ra diễn đàn kythuatvien.com phục vụ cộng đồng, trang web đã có hơn 100.000 thành viên tham gia - một con số rất lớn thời điểm đó.
