@@ -24,6 +24,10 @@ strong {
 	color: #3c3c3c;
 	text-align: center;
 }
+.bi-bw {
+	width: 1.3rem;
+    display: inline-block;
+}
 
 .menunguyen .list-group-item {
 	border-radius: 0 !important;
@@ -190,11 +194,20 @@ strong {
 #nguyenTab .nav-link {
 	background: #fff;
 	color: #333;
-	padding: 1rem 1.5rem;
+	padding: 1rem 1.3rem;
 	border: 0;
 	border-radius: 0;
 	position: relative;
 	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#nguyenTab .nav-link i {
+	display: none;
+	font-size: 1.2rem;
+	width: 1.5rem;
+	margin-right: 3px;
 }
 #nguyenTab .nav-link:hover {
 	background: #f2f2f2;
@@ -205,6 +218,23 @@ strong {
 	border: 0;
 	box-shadow: 0 -3px 0 #007bff inset;
 	color: #007bff;
+}
+
+@media (min-width: 1200px) {
+	#nguyenTab .nav-link i {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		opacity: .5;
+	}
+	#nguyenTab .nav-link.active i {
+		opacity: 1;
+	}
+}
+@media (min-width: 1400px) {
+	#nguyenTab .nav-link {
+		padding: 1rem 1.5rem;
+	}
 }
 
 .bg-dark .typed-cursor {
