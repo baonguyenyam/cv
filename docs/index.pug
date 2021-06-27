@@ -125,6 +125,7 @@ html(serial-key=key.slice(70, 75).toUpperCase()+'-'+key.slice(80, 85).toUpperCas
 			script(key=val, src='./js/domChange.js?v='+text)
 			script(key=val, src='./js/domReady.js?v='+text)
 			script(key=val, src='./js/encode.js?v='+text)
+			script(key=val, src='./js/animateAnything.js?v='+text)
 			script(key=val, src='./js/chat.js?v='+text)
 	body(license-key=key.slice(50, 100)+"__________"+key.slice(70, 170)+"_____"+key+"____"+key+key+"________"+key.slice(0, 50))
 		if process.env.NODE_ENV === 'production'

@@ -1,7 +1,10 @@
 nav.navbar.navbar-expand-lg.d-lg-none.navbar-dark.bg-dark.fixed-top.shadow-sm#nguyentopBar
 	a.navbar-brand.textgra(href="/") Nguyen Pham
-	button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarTogglerNguyen' aria-controls='navbarTogglerNguyen' aria-expanded='false' aria-label='Toggle navigation')
-		span.fas.fa-bars
+	button.navbar-toggler#gimenu(type='button' data-toggle='collapse' data-target='#navbarTogglerNguyen' aria-controls='navbarTogglerNguyen' aria-expanded='false' aria-label='Toggle navigation')
+		svg#imenu.nicon(viewBox='0 0 100 100' width="30px" height="30px")
+			path#top-line-1(d='M30,37 L70,37 Z')
+			path#middle-line-1(d='M30,50 L70,50 Z')
+			path#bottom-line-1(d='M30,63 L70,63 Z')
 	#navbarTogglerNguyen.collapse.navbar-collapse
 		ul.navbar-nav.mr-auto.mt-2.mt-lg-0
 			li.nav-item
