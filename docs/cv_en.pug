@@ -8,17 +8,17 @@ nav.navbar.navbar-expand-lg.d-lg-none.navbar-dark.bg-dark.fixed-top.shadow-sm#ng
 	#navbarTogglerNguyen.collapse.navbar-collapse
 		ul.navbar-nav.mr-auto.mt-2.mt-lg-0
 			li.nav-item
-				a.nav-link(href="javascript:void(0)" todata="about") Tại hạ
+				a.nav-link(href="javascript:void(0)" todata="about") Overview
 			li.nav-item
-				a.nav-link(href="javascript:void(0)" todata="job") Quá trình
+				a.nav-link(href="javascript:void(0)" todata="job") Experience
 			li.nav-item
-				a.nav-link(href="javascript:void(0)" todata="project") Dự án
+				a.nav-link(href="javascript:void(0)" todata="project") Projects
 			li.nav-item
-				a.nav-link(href="javascript:void(0)" todata="portfolio") Sản phẩm
+				a.nav-link(href="javascript:void(0)" todata="portfolio") Portfolio
 			li.nav-item
-				a.nav-link(href="javascript:void(0)" todata="skills") Kỹ năng khác
+				a.nav-link(href="javascript:void(0)" todata="skills") Further
 			li.nav-item
-				a.nav-link(href="javascript:void(0)" todata="awards") Thông tin
+				a.nav-link(href="javascript:void(0)" todata="awards") Information
 
 .container-fluid.position-static
 	.welcome.bgtrans2 RESUME
@@ -33,33 +33,33 @@ nav.navbar.navbar-expand-lg.d-lg-none.navbar-dark.bg-dark.fixed-top.shadow-sm#ng
 					button#dropdownMenuButton.btn.btn-primary.btn-sm.btn-block.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
 						i.lnr.lnr-menu
 					.dropdown-menu.dropdown-menuhehe.dropdown-menu-right(aria-labelledby="dropdownMenuButton")
-						a.dropdown-item(href="javascript:void(0);" todata="about") Tại hạ
-						a.dropdown-item(href="javascript:void(0);" todata="job") Quá trình
-						a.dropdown-item(href="javascript:void(0);" todata="project") Dự án
-						a.dropdown-item(href="javascript:void(0);" todata="skills") Kỹ năng khác
-						a.dropdown-item(href="javascript:void(0);" todata="awards") Thông tin
-						a.dropdown-item(href="javascript:void(0);" todata="portfolio") Sản phẩm
+						a.dropdown-item(href="javascript:void(0);" todata="about") Overview
+						a.dropdown-item(href="javascript:void(0);" todata="job") Experience
+						a.dropdown-item(href="javascript:void(0);" todata="project") Projects
+						a.dropdown-item(href="javascript:void(0);" todata="skills") Further
+						a.dropdown-item(href="javascript:void(0);" todata="awards") Information
+						a.dropdown-item(href="javascript:void(0);" todata="portfolio") Portfolio
 
 				ul#nguyenTab.nav.nav-tabs.d-none.d-md-flex(role='tablist')
 					li.nav-item
-						a#home-tab.nav-link.active(data-toggle='tab', href='#about', role='tab', aria-controls='about', aria-selected='true') Tại hạ
+						a#home-tab.nav-link.active(data-toggle='tab', href='#about', role='tab', aria-controls='about', aria-selected='true') Overview
 					li.nav-item
-						a#job-tab.nav-link(data-toggle='tab', href='#job', role='tab', aria-controls='job', aria-selected='false') Quá trình
+						a#job-tab.nav-link(data-toggle='tab', href='#job', role='tab', aria-controls='job', aria-selected='false') Experience
 					li.nav-item
-						a#project-tab.nav-link(data-toggle='tab', href='#project', role='tab', aria-controls='project', aria-selected='false') Dự án
+						a#project-tab.nav-link(data-toggle='tab', href='#project', role='tab', aria-controls='project', aria-selected='false') Projects
 					li.nav-item
-						a#portfolio-tab.nav-link(data-toggle='tab', href='#portfolio', role='tab', aria-controls='portfolio', aria-selected='false') Sản phẩm
+						a#portfolio-tab.nav-link(data-toggle='tab', href='#portfolio', role='tab', aria-controls='portfolio', aria-selected='false') Portfolio
 					li.nav-item
-						a#skills-tab.nav-link(data-toggle='tab', href='#skills', role='tab', aria-controls='skills', aria-selected='false') Kỹ năng khác
+						a#skills-tab.nav-link(data-toggle='tab', href='#skills', role='tab', aria-controls='skills', aria-selected='false') Further
 					li.nav-item
-						a#awards-tab.nav-link(data-toggle='tab', href='#awards', role='tab', aria-controls='awards', aria-selected='false') Thông tin
+						a#awards-tab.nav-link(data-toggle='tab', href='#awards', role='tab', aria-controls='awards', aria-selected='false') Information
 				#nguyenTabContent.tab-content
-					include layout/home
-					include layout/timeline
-					include layout/project
+					include layout/home_en
+					include layout/timeline_en
+					include layout/project_en
 					include layout/portfolio
-					include layout/skill
-					include layout/adware
+					include layout/skill_en
+					include layout/adware_en
 
 		.order-lg-1.col-lg-3.col-xl-3.position-sticky
 			.box.card.bg-light.mt-4.mt-lg-0
@@ -68,7 +68,7 @@ nav.navbar.navbar-expand-lg.d-lg-none.navbar-dark.bg-dark.fixed-top.shadow-sm#ng
 				.card-body.border-top
 					.d-flex.justify-content-between.align-items-start
 						h5.card-title.mb-0.textgra Nguyen Pham
-						a.btn.btn-outline-primary.btn-lang(href="index_en.html") EN
+						a.btn.btn-outline-primary.btn-lang(href="index.html") VN
 					p.text-muted Full-Stack Developer
 					ul.list-inline.mb-0.social
 						li.list-inline-item
@@ -92,12 +92,12 @@ nav.navbar.navbar-expand-lg.d-lg-none.navbar-dark.bg-dark.fixed-top.shadow-sm#ng
 
 
 			.box.list-group.mt-4
-				h1.list-group-item.active.h6 Tại hạ
+				h1.list-group-item.active.h6 Overview
 				div.list-group-item
 					blockquote.blockquote.my-3.mx-md-1
 						span
 							int ❛❛
-							| Tôi đã từng nghĩ code và design chỉ là sự đam mê để rồi một ngày tôi nhận ra nó là cả cuộc đời này.
+							| I used to think design and code was my passion until I suddenly realized it was my life
 							int ❞
 						//- footer.blockquote-footer
 							cite(title='Vũ Trung Chi Chúc') Vũ Trung Chi Chúc

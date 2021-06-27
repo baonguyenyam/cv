@@ -45,6 +45,12 @@ if (process.env.NODE_ENV !== 'production') {
 		var htmlContent = body;
 		fs.writeFile('./docs/index.html', htmlContent, (error) => { /* handle error */ });
 	  });
+	request({
+		uri: "http://localhost:8080/index_en.cb",
+	  }, function(error, response, body) {
+		var htmlContent = body;
+		fs.writeFile('./docs/index_en.html', htmlContent, (error) => { /* handle error */ });
+	  });
 }
 app.set('view engine', 'pug')
 app.set('views', site.views)
@@ -56,9 +62,13 @@ router.use(function (req, res, next) {
 router.get('/', function (req, res) {
 	res.render('index', { key: makeid(200), val: makeid(20), memory: process.memoryUsage(), cpu: process.cpuUsage(), platform: process.platform, version: process.versions })
 })
+router.get('/index_en.cb', function (req, res) {
+	res.render('index_en', { key: makeid(200), val: makeid(20), memory: process.memoryUsage(), cpu: process.cpuUsage(), platform: process.platform, version: process.versions })
+})
 
 app.use('/', router);
 app.use('/index.cb', router);
+app.use('/index_en.cb', router);
 
 // handling 404 errors
 app.get('*', function (req, res, next) {
@@ -119,3 +129,4 @@ function PugCom(a, b) {
 	parseFiles(a, b);
 }
 PugCom(site.root + '/docs/cv.pug', site.root + '/docs/cv.js')
+PugCom(site.root + '/docs/cv_en.pug', site.root + '/docs/cv_en.js')
