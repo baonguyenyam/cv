@@ -26,7 +26,11 @@ b, strong {
 .tab-content {
 	border: 0;
 	border-top: 0;
-	padding: 1rem 2rem
+	padding: 0;
+}
+.tab-content .tab-pane:not(#about) {
+	padding: 1rem 2rem;
+	border-top: 1px solid #dee2e6;
 }
 
 .nav-tabs .nav-item {
@@ -145,6 +149,9 @@ b, strong {
 }
 .text-supper-muted {
 	color: #bdc6d8
+}
+#nguyenTab  {
+	border-bottom: 0;
 }
 #nguyenTab .nav-item {
 	margin: 0;
@@ -509,7 +516,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .welcome {
-	font-size: 60px;
+	font-size: 48px;
 	font-weight: 700;
 	margin: 0;
 	line-height: 1;
