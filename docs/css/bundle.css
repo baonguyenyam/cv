@@ -1994,18 +1994,7 @@ h6 {
 	white-space: nowrap;
 }
 
-@media (min-width: 767px) and (max-width: 991px) {
-	/* .welcome {
-		position: fixed;
-		z-index: 999999;
-		writing-mode: vertical-rl;
-		text-orientation: mixed;
-		top: 0;
-		left: 0;
-	} */
-}
-
-@media (min-width: 992px) {
+@media (min-width: 1250px) {
 	.welcome {
 		position: fixed;
 		z-index: 999999;
@@ -2019,7 +2008,7 @@ h6 {
 	}
 }
 
-@media (min-width: 1350px) {
+@media (min-width: 1450px) {
 	.welcome {
 		position: fixed;
 		z-index: 1;
@@ -2034,7 +2023,7 @@ h6 {
 	}
 }
 
-@media (min-width: 1350px) {
+@media (min-width: 1550px) {
 	.welcome_2 {
 		display: block;
 		position: fixed;
@@ -2056,7 +2045,7 @@ h6 {
 	display: none;
 }
 
-@media (min-width: 1350px) {
+@media (min-width: 1550px) {
 	.welcome_3 {
 		display: block;
 		position: fixed;
