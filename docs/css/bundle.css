@@ -2168,6 +2168,9 @@ body * {
 }
 
 @media (min-width: 992px) {
+	.texttyping {
+		border-radius: 0 0 0 0;
+	}
 	.single-chart .circular-chart {
 		display: block;
 		margin: 0 auto 1rem auto;
