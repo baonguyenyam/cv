@@ -1648,7 +1648,7 @@ strong {
 }
 
 .bg-dark .text-replace {
-	white-space: pre;
+	/* white-space: pre; */
 	line-height: 1.25em;
 	color: #87ceeb;
 	font-family: "Source Code Pro", Consolas, "Courier New", monospace;
@@ -2337,4 +2337,17 @@ body * {
     line-height: 1;
     display: block;
     border-radius: 3px;
+}
+.taskbar {
+	font-size: .7rem;
+    color: #343a40;
+    background-color: #d0dffc;
+    padding: .35rem .5rem;
+    line-height: 1;
+    border-bottom: 1px solid #a9b9d6;
+}
+@media (min-width: 992px) {
+	.taskbar {
+		font-size: .8rem;
+	}
 }
