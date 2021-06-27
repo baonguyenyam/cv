@@ -17,7 +17,7 @@ var site = {
 }
 app.use(json_body_parser);
 app.use(urlencoded_body_parser);
-app.use('/', express.static(site.root + '/docs'));
+app.use('/cv', express.static(site.root + '/docs'));
 
 if (process.env.NODE_ENV !== 'production') {
 	app.locals.pretty = true;
@@ -30,23 +30,23 @@ if (process.env.NODE_ENV !== 'production') {
 			online: false,
 			open: true,
 			port: site.port + 1,
-			proxy: 'localhost:' + site.port + '',
+			proxy: 'localhost:' + site.port + '/cv',
 			ui: false
 		});
 	}
 } else {
 	app.listen(site.port, function () {
 		console.log('App listening on port !' + site.port);
-		require("openurl").open("http://localhost:" + site.port + '')
+		require("openurl").open("http://localhost:" + site.port + '/cv')
 	});
 	request({
-		uri: "http://localhost:8080",
+		uri: "http://localhost:8080/cv",
 	  }, function(error, response, body) {
 		var htmlContent = body;
 		fs.writeFile('./docs/index.html', htmlContent, (error) => { /* handle error */ });
 	  });
 	request({
-		uri: "http://localhost:8080/en",
+		uri: "http://localhost:8080/cv/en",
 	  }, function(error, response, body) {
 		var htmlContent = body;
 		fs.writeFile('./docs/en/index.html', htmlContent, (error) => { /* handle error */ });
@@ -59,15 +59,21 @@ router.use(function (req, res, next) {
 	next();
 });
 
-router.get('/', function (req, res) {
+app.get('/cv', function (req, res) {
 	res.render('index', { key: makeid(200), val: makeid(20), memory: process.memoryUsage(), cpu: process.cpuUsage(), platform: process.platform, version: process.versions })
 })
-router.get('/en', function (req, res) {
+app.get('/cv/en', function (req, res) {
 	res.render('en/index', { key: makeid(200), val: makeid(20), memory: process.memoryUsage(), cpu: process.cpuUsage(), platform: process.platform, version: process.versions })
 })
+// router.get('/cv', function (req, res) {
+// 	res.render('index', { key: makeid(200), val: makeid(20), memory: process.memoryUsage(), cpu: process.cpuUsage(), platform: process.platform, version: process.versions })
+// })
+// router.get('/cv/en', function (req, res) {
+// 	res.render('en/index', { key: makeid(200), val: makeid(20), memory: process.memoryUsage(), cpu: process.cpuUsage(), platform: process.platform, version: process.versions })
+// })
 
-app.use('/', router);
-app.use('/en/', router);
+app.use('/cv', router);
+app.use('/cv/en/', router);
 
 // handling 404 errors
 app.get('*', function (req, res, next) {
