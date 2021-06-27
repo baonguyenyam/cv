@@ -704,23 +704,10 @@ var typed = new Typed('.text-replace', {
 	contentType: 'html',
 	loopCount: false
 });
-$(document).ready(function () {
-	$("#navbarTogglerNguyen").on("click", "a", function () {
-		$('#nguyenTab a[href="#' + $(this).attr("todata") + '"]').tab('show');
-		$('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
-			// event.target // newly activated tab
-			// event.relatedTarget // previous active tab
-			$('html, body').animate({
-				scrollTop: $("#viewcontent").offset().top - 80
-			}, 100);
-			$('#nguyentopBar button').trigger('click')
-		})
-	});
-});
 
 
 /////////////////////////////////////////////////////
-/////////////////////  ICON 1  //////////////////////
+/////////////////////  ICON MENU  //////////////////////
 /////////////////////////////////////////////////////
 
 ///Initiation Variables
@@ -870,16 +857,43 @@ function closeMenuAnimation_1() {
 }
 
 ///Events
-icon_1.addEventListener( "click", ()=> {
-  if ( state_1 === "menu" ) {
-  	openMenuAnimation_1();
-  	state_1 = "arrow";
-  	arrowDisappearComplete_1 = false;
-		menuAppearComplete_1 = false;
-  } else if ( state_1 === "arrow" ) {
-  	closeMenuAnimation_1();
-  	state_1 = "menu";
-  	menuDisappearComplete_1 = false;
-		arrowAppearComplete_1 = false;
-  }
+// icon_1.addEventListener( "click", ()=> {
+//   if ( state_1 === "menu" ) {
+//   	openMenuAnimation_1();
+//   	state_1 = "arrow";
+//   	arrowDisappearComplete_1 = false;
+// 		menuAppearComplete_1 = false;
+//   } else if ( state_1 === "arrow" ) {
+//   	closeMenuAnimation_1();
+//   	state_1 = "menu";
+//   	menuDisappearComplete_1 = false;
+// 		arrowAppearComplete_1 = false;
+//   }
+// });
+
+
+$(document).ready(function () {
+	$("#navbarTogglerNguyen").on("click", "a", function () {
+		$('#nguyenTab a[href="#' + $(this).attr("todata") + '"]').tab('show');
+		$('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+			$('html, body').animate({
+				scrollTop: $("#viewcontent").offset().top - 150
+			}, 100);
+		})
+		$('#nguyentopBar button').trigger('click')
+		$('.welcome').text($(this).text())
+	});
+	$('#gimenu').on('click', function(){
+		if ( state_1 === "menu" ) {
+			openMenuAnimation_1();
+			state_1 = "arrow";
+			arrowDisappearComplete_1 = false;
+			menuAppearComplete_1 = false;
+		} else if ( state_1 === "arrow" ) {
+			closeMenuAnimation_1();
+			state_1 = "menu";
+			menuDisappearComplete_1 = false;
+			arrowAppearComplete_1 = false;
+		}
+	})
 });
