@@ -896,4 +896,11 @@ $(document).ready(function () {
 			arrowAppearComplete_1 = false;
 		}
 	})
+	LIFT_CHAT_APP.jsonLoad(
+		'https://api.github.com/users/baonguyenyam',
+		(data) => {
+			$('#badge-from-github').html('<div class="item"><span>Followers</span><span>'+data.followers+'</span></div><div class="item"><span>Repositories</span><span>'+data.public_repos+'</span></div>')
+		},
+		(xhr) => {}
+	);
 });
