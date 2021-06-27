@@ -1995,15 +1995,14 @@ h6 {
 }
 
 @media (min-width: 767px) and (max-width: 991px) {
-	.welcome {
+	/* .welcome {
 		position: fixed;
 		z-index: 999999;
-		-ms-writing-mode: tb-rl;
-		    writing-mode: vertical-rl;
+		writing-mode: vertical-rl;
 		text-orientation: mixed;
 		top: 0;
 		left: 0;
-	}
+	} */
 }
 
 @media (min-width: 992px) {
@@ -2029,7 +2028,7 @@ h6 {
 		text-orientation: mixed;
 		top: 0px;
 		left: initial;
-		right: -5px;
+		right: -20px;
 		opacity: 0.05;
 		font-size: 90px;
 	}
