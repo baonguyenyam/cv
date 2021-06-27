@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "start": "node index.js",
+        "clean": "rimraf ./docs/index.html ./docs/en/index.html",
+        "start": "npm run clean && node index.js",
         "concat": "concat -o ./docs/css/bundle.css ./docs/css/bootstrap.min.css ./docs/css/bootstrap/bootstrap-icons.css ./docs/css/jquery.fancybox.min.css ./docs/css/chat.css ./docs/css/main.css",
         "concatjs": "concat -o ./docs/js/bundle.js ./docs/js/jquery.min.js ./docs/js/popper.min.js  ./docs/js/bootstrap.min.js  ./docs/js/typed.min.js ./docs/js/jquery.fancybox.min.js ./docs/js/domChange.js ./docs/js/domReady.js ./docs/js/encode.js ./docs/js/animateAnything.js ./docs/js/chat.js ./docs/js/main.js",
         "nano": "cssnano ./docs/css/bundle.css ./docs/css/bundle.min.css",
@@ -40,7 +41,7 @@
         "npm-check-updates": "2.14.2",
         "pug": "2.0.3",
         "pug-lint": "2.5.0",
-        "rimraf": "2.6.2",
+        "rimraf": "^2.6.2",
         "sass": "1.3.2"
     },
     "engines": {
