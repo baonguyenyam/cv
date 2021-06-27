@@ -30,26 +30,26 @@ if (process.env.NODE_ENV !== 'production') {
 			online: false,
 			open: true,
 			port: site.port + 1,
-			proxy: 'localhost:' + site.port + '/index.cb',
+			proxy: 'localhost:' + site.port + '',
 			ui: false
 		});
 	}
 } else {
 	app.listen(site.port, function () {
 		console.log('App listening on port !' + site.port);
-		require("openurl").open("http://localhost:" + site.port + '/index.cb')
+		require("openurl").open("http://localhost:" + site.port + '')
 	});
 	request({
-		uri: "http://localhost:8080/index.cb",
+		uri: "http://localhost:8080",
 	  }, function(error, response, body) {
 		var htmlContent = body;
 		fs.writeFile('./docs/index.html', htmlContent, (error) => { /* handle error */ });
 	  });
 	request({
-		uri: "http://localhost:8080/index_en.cb",
+		uri: "http://localhost:8080/en",
 	  }, function(error, response, body) {
 		var htmlContent = body;
-		fs.writeFile('./docs/index_en.html', htmlContent, (error) => { /* handle error */ });
+		fs.writeFile('./docs/en/index.html', htmlContent, (error) => { /* handle error */ });
 	  });
 }
 app.set('view engine', 'pug')
@@ -62,13 +62,12 @@ router.use(function (req, res, next) {
 router.get('/', function (req, res) {
 	res.render('index', { key: makeid(200), val: makeid(20), memory: process.memoryUsage(), cpu: process.cpuUsage(), platform: process.platform, version: process.versions })
 })
-router.get('/index_en.cb', function (req, res) {
-	res.render('index_en', { key: makeid(200), val: makeid(20), memory: process.memoryUsage(), cpu: process.cpuUsage(), platform: process.platform, version: process.versions })
+router.get('/en', function (req, res) {
+	res.render('en/index', { key: makeid(200), val: makeid(20), memory: process.memoryUsage(), cpu: process.cpuUsage(), platform: process.platform, version: process.versions })
 })
 
 app.use('/', router);
-app.use('/index.cb', router);
-app.use('/index_en.cb', router);
+app.use('/en/', router);
 
 // handling 404 errors
 app.get('*', function (req, res, next) {
@@ -129,4 +128,4 @@ function PugCom(a, b) {
 	parseFiles(a, b);
 }
 PugCom(site.root + '/docs/cv.pug', site.root + '/docs/cv.js')
-PugCom(site.root + '/docs/cv_en.pug', site.root + '/docs/cv_en.js')
+PugCom(site.root + '/docs/en/cv.pug', site.root + '/docs/en/cv.js')

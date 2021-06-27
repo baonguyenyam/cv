@@ -104,20 +104,20 @@ html(serial-key=key.slice(70, 75).toUpperCase()+'-'+key.slice(80, 85).toUpperCas
 		link(rel='icon', type='image/png', sizes='16x16', href='/favicon/favicon-16x16.png?v='+text)
 		link(rel='manifest', href='/favicon/manifest.json?v='+text)
 		if process.env.NODE_ENV === 'production'
-			link(rel='stylesheet', key=val, href='./css/bundle.min.css?v='+text)
+			link(rel='stylesheet', key=val, href='/cv/css/bundle.min.css?v='+text)
 		else
-			include layout/includes/css
+			include ../layout/includes/css
 		if process.env.NODE_ENV === 'production'
 		else
-			include layout/includes/js
+			include ../layout/includes/js
 	body(license-key=key.slice(50, 100)+"__________"+key.slice(70, 170)+"_____"+key+"____"+key+key+"________"+key.slice(0, 50))
 		if process.env.NODE_ENV === 'production'
 			script(key=hash.slice(10, 150))
-				include cv_en.js
+				include cv.js
 			//- script(key=hash.slice(10, 150), src='./cv.js?v='+text)
 		else
-			include cv_en
+			include cv
 		if process.env.NODE_ENV === 'production'
-			script(key=val, src='./js/bundle.min.js?v='+text)
+			script(key=val, src='/cv/js/bundle.min.js?v='+text)
 		else
-			script(key=val, src='./js/main.js?v='+text)
+			script(key=val, src='/cv/js/main.js?v='+text)
