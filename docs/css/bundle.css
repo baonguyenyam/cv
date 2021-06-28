@@ -2538,3 +2538,18 @@ body * {
 ::-webkit-scrollbar-thumb:hover {
 	background: #a9b9d6;
 }
+.highlight {
+    text-decoration: underline dotted #e9087f;
+    color: #007bff;
+	cursor: crosshair;
+}
+.highlight-1 {
+	text-decoration: underline dotted #a9b9d6;
+    color: #007bff;
+	cursor: crosshair;
+}
+.highlight-2 {
+	text-decoration: underline dotted #007bff;
+	color: #e9087f;
+	cursor: crosshair;
+}
