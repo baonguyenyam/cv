@@ -1754,10 +1754,10 @@ blockquote int:last-child {
 
 @media (min-width: 992px) {
 	blockquote span:before {
-		padding-left: 1.3rem;
+		padding-left: 1.5rem;
 	}
 	blockquote int:last-child {
-		padding-left: .15rem;
+		padding-left: .25rem;
 	}
 }
 
