@@ -415,28 +415,20 @@ h6 {
 }
 
 .progress .progress-bar {
-	animation: loadbar 2s;
-	-webkit-animation: loadbar 2s;
+	animation: loadbar 6s;
+	-webkit-animation: loadbar 6s;
 }
 
 @keyframes loadbar {
 	0% {
 		width: 0%;
 	}
-
-	/* 100% {
-	  width: 100%;
-	} */
 }
 
 @-webkit-keyframes loadbar {
 	0% {
 		width: 0%;
 	}
-
-	/* 100% {
-	  width: 100%;
-	} */
 }
 
 .box {
@@ -444,6 +436,7 @@ h6 {
 	border-radius: 10px;
 	overflow: hidden;
 	background-color: #fff;
+	box-shadow: 0px 5px 12px -2px rgb(52 87 220 / 37%) !important
 }
 
 .bgtrans {
@@ -852,12 +845,10 @@ body * {
 	fill: none;
 	stroke-width: 1.8;
 	stroke-linecap: round;
-	animation: progress 1s ease-out forwards;
+	animation: progress 6s ease-out forwards;
 }
 @keyframes progress {
-	0% {
-		stroke-dasharray: 0 100;
-	}
+	0% { stroke-dasharray: 0 100; }
 }
 .single-chart .circular-chart.sliver .circle {
 	stroke: #c1c1c1;
@@ -1016,6 +1007,13 @@ body * {
     display: block;
     border-radius: 3px;
 }
+.btn-mo {
+	padding: 0.15rem .25rem 0.15rem .25rem;
+    font-size: .75rem;
+    line-height: 1;
+    display: block;
+    border-radius: 3px;
+}
 .taskbar {
 	font-size: .7rem;
     color: #343a40;
@@ -1150,4 +1148,51 @@ body * {
 	padding: .25rem .5rem;
 	background-color: #d0dffc;
 	font-weight: 700;
+}
+.modal-content {
+    border-radius: 10px;
+	border: 1px solid #a9b9d6;
+}
+.modal-content .modal-header {
+	background: #d0dffc;
+    padding: .25rem 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #a9b9d6;
+	display: flex;
+	align-items: center;
+}
+.modal-content .modal-header .modal-title {
+	font-size: 1rem;
+}
+.modal-content .modal-header button.close {
+	padding: .25rem .25rem;
+    margin: -.25rem -.25rem -.25rem auto;
+	font-size: 1rem;
+}
+.modal-content .modal-header button.close:focus {
+	outline: 0;
+}
+
+
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+::-webkit-scrollbar {
+	height: 7px;
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: #dfdfdf;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #aaaaaa;
+	height: 100px;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #a9b9d6;
 }
