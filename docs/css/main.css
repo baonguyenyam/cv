@@ -104,7 +104,7 @@ strong {
 	margin: 0;
 	padding-bottom: 2rem;
 	/* text-transform: uppercase; */
-	white-space: nowrap;
+	/* white-space: nowrap; */
 	color: #b1b1b1;
 }
 
@@ -638,6 +638,25 @@ h6 {
 
 [data-fancybox="gallery"]:hover img {
 	transform: scale(1.5);
+}
+#portfolio .card {
+	background: #d3d3d3;
+	border: 1px solid #aaaaaa;
+	position: relative;
+}
+#portfolio .card:hover:after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.65);
+	top: 0;
+	left: 0;
+}
+#portfolio .card:hover:before {
+	background: rgba(255, 255, 255, 0.5);
+	color: #000000
 }
 
 .video[data-fancybox="gallery"]:before {
