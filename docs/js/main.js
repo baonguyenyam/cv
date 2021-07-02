@@ -12,14 +12,26 @@ document.onkeyup = function (e) {
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 })
-var typed = new Typed('.text-replace', {
-	strings: ["<span class='main'>print</span><span class='text3'>('Hello, I am Nguyen Pham!')</span> ^500 <br><span class='main'>workingOn</span><span class='text3'>('Js, Sass, WordPress, PHP, TypeScript, Ps, Ai...')</span> ^500 <br><span class='include'>let</span> projects <span class='text3'>></span> <span class='main2'>100</span> ^500 <br><span class='include'>let</span> skillsEngineers <span class='text3'>≈</span> <span class='main2'>'90%'</span> ^500 <br><span class='include'>let</span> labs <span class='text3'>=</span> <span class='text2'>handsOn</span> ^500 <br><span class='include'>let</span> hire <span class='text3'>=</span> <span class='text2'>available</span> ^500 <br><span class='include'>let</span> DOB <span class='text3'>=</span> <span class='main'>'Aug 16-1983'</span> ^500 <br><span class='include'>let</span> location <span class='text3'>=</span> <span class='text2'>\"Fort Worth, Texas\"</span> ^500 <br><span class='include'>let</span> Companies <span class='text3'>></span> <span class='text2'>6</span><br><br><a class='text-white' href='//baonguyenyam.github.io' target='_blank'>readMore();</a><br>..."],
-	typeSpeed: 20,
-	backDelay: 50000,
-	loop: true,
-	contentType: 'html',
-	loopCount: false
-});
+if($('#text-replace').length) {
+	var typed = new Typed('#text-replace', {
+		strings: ["<span class='main'>print</span><span class='text3'>('Hello, I am Nguyen Pham!')</span> ^500 <br><span class='main'>workingOn</span><span class='text3'>('Js, Sass, WordPress, PHP, TypeScript, Ps, Ai...')</span> ^500 <br><span class='include'>let</span> projects <span class='text3'>></span> <span class='main2'>100</span> ^500 <br><span class='include'>let</span> skillsEngineers <span class='text3'>≈</span> <span class='main2'>'90%'</span> ^500 <br><span class='include'>let</span> labs <span class='text3'>=</span> <span class='text2'>handsOn</span> ^500 <br><span class='include'>let</span> hire <span class='text3'>=</span> <span class='text2'>available</span> ^500 <br><span class='include'>let</span> DOB <span class='text3'>=</span> <span class='main'>'Aug 16-1983'</span> ^500 <br><span class='include'>let</span> location <span class='text3'>=</span> <span class='text2'>\"Fort Worth, Texas\"</span> ^500 <br><span class='include'>let</span> Companies <span class='text3'>></span> <span class='text2'>6</span><br><br><a class='text-white' href='//baonguyenyam.github.io' target='_blank'>readMore();</a><br>..."],
+		typeSpeed: 20,
+		backDelay: 50000,
+		loop: true,
+		contentType: 'html',
+		loopCount: false
+	});
+}
+if($('#text-replace-vn').length) {
+	var typedvn = new Typed('#text-replace-vn', {
+		strings: ["<span class='main'>print</span><span class='text3'>('Xin chao, toi la Nguyen Pham!')</span> ^500 <br><span class='main'>workingOn</span><span class='text3'>('Js, Sass, WordPress, PHP, TypeScript, Ps, Ai...')</span> ^500 <br><span class='include'>let</span> cacDuAn <span class='text3'>></span> <span class='main2'>100</span> ^500 <br><span class='include'>let</span> kyNangCongNghe <span class='text3'>≈</span> <span class='main2'>'90%'</span> ^500 <br><span class='include'>let</span> labs <span class='text3'>=</span> <span class='text2'>handsOn</span> ^500 <br><span class='include'>let</span> hire <span class='text3'>=</span> <span class='text2'>available</span> ^500 <br><span class='include'>let</span> DOB <span class='text3'>=</span> <span class='main'>'Aug 16-1983'</span> ^500 <br><span class='include'>let</span> location <span class='text3'>=</span> <span class='text2'>\"Fort Worth, Texas\"</span> ^500 <br><span class='include'>let</span> Companies <span class='text3'>></span> <span class='text2'>6</span><br><br><a class='text-white' href='//baonguyenyam.github.io' target='_blank'>readMore();</a><br>..."],
+		typeSpeed: 20,
+		backDelay: 50000,
+		loop: true,
+		contentType: 'html',
+		loopCount: false
+	});
+}
 
 
 /////////////////////////////////////////////////////
@@ -216,6 +228,7 @@ $(document).ready(function () {
 		'https://api.github.com/users/baonguyenyam',
 		(data) => {
 			$('#badge-from-github').html('<div class="item"><span>Followers</span><span>'+data.followers+'</span></div><div class="item"><span>Repositories</span><span>'+data.public_repos+'</span></div>')
+			$('#badge-from-github-vn').html('<div class="item"><span>Theo dõi</span><span>'+data.followers+'</span></div><div class="item"><span>Kho mã</span><span>'+data.public_repos+'</span></div>')
 		},
 		(xhr) => {}
 	);
@@ -263,23 +276,39 @@ document.addEventListener('contextmenu', onContextMenu, false);
 
 
 // Disable HOT KEY
-var isCtrl = false;
-document.onkeyup=function(e){
-    if(e.keyCode == 17) isCtrl=false;
+// var isCtrl = false;
+// document.onkeyup=function(e){
+//     if(e.keyCode == 17) isCtrl=false;
+// }
+// document.onkeydown=function(e){
+//     if(e.keyCode == 17) isCtrl=true;
+//     if((e.keyCode == 83 && isCtrl == true) || (e.keyCode == 73 && isCtrl == true) || e.keyCode == 123) {
+//         return false;
+//     }
+// }
+// document.addEventListener("keydown", function(e) {
+// 	if (((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey) && e.keyCode == 83) || ((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey) && e.keyCode == 73) || e.keyCode == 123) {
+// 	  e.preventDefault();
+// 	}
+//   }, false);
+// window.addEventListener("keypress", function(event) {
+// 	if (!(event.which == 115 && event.ctrlKey) && !(event.which == 19)) return true
+// 	event.preventDefault()
+// 	return false
+// })
+
+
+function __nEn(c) {
+    return btoa(encodeURIComponent(c).replace(/%([0-9A-F]{2})/g, function toSolidBytes(a, b) {
+        return String.fromCharCode('0x' + b)
+    }))
 }
-document.onkeydown=function(e){
-    if(e.keyCode == 17) isCtrl=true;
-    if((e.keyCode == 83 && isCtrl == true) || (e.keyCode == 73 && isCtrl == true) || e.keyCode == 123) {
-        return false;
-    }
+
+function __nDe(a) {
+    return decodeURIComponent(atob(a).split('').map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+    }).join(''))
 }
-document.addEventListener("keydown", function(e) {
-	if (((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey) && e.keyCode == 83) || ((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey) && e.keyCode == 73) || e.keyCode == 123) {
-	  e.preventDefault();
-	}
-  }, false);
-window.addEventListener("keypress", function(event) {
-	if (!(event.which == 115 && event.ctrlKey) && !(event.which == 19)) return true
-	event.preventDefault()
-	return false
-})
+document.onkeyup = function (a) {
+    if ((a = a || window.event).altKey && a.ctrlKey && a.shiftKey && 13 == a.which) return $("body"), $('#infoMeModal').modal('show'), undefined
+};

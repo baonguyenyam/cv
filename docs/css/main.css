@@ -1690,13 +1690,13 @@ body * {
 		line-height: 27px;
 	}
 }
-#badge-from-github {
+.badge-from-github {
 	margin-bottom: 0.5rem;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-#badge-from-github .item {
+.badge-from-github .item {
 	display: inline-flex;
 	font-size: 0.65rem;
 	line-height: 1;
@@ -1707,12 +1707,12 @@ body * {
 	color: #283b70;
 	margin: 0 0.5rem 0.5rem 0;
 }
-#badge-from-github .item span:first-child {
+.badge-from-github .item span:first-child {
 	font-weight: 600;
 	padding: 0.25rem 0.5rem;
 	background-color: #eff7ff;
 }
-#badge-from-github .item span:last-child {
+.badge-from-github .item span:last-child {
 	padding: 0.25rem 0.5rem;
 	background-color: #d0dffc;
 	font-weight: 700;
