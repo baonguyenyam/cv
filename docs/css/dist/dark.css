@@ -38,6 +38,25 @@ html body #loading:before {
 html body .progress {
   background-color: var(--bg);
 }
+html body #content-menu {
+  background-color: var(--bg);
+  box-shadow: 0px 5px 12px -2px var(--sbg) !important;
+  border-color: var(--sbg) !important;
+}
+html body #content-menu .menu-separator {
+  border-color: rgba(0, 0, 0, 0.125) !important;
+}
+html body #content-menu .menu-btn {
+  color: var(--muted);
+}
+html body #content-menu .menu-item:hover .menu-btn {
+  background-color: var(--sbg);
+  border: 1px solid var(--box);
+  color: var(--white);
+}
+html body #content-menu .menu-item-disabled .menu-btn {
+  color: var(--colorin);
+}
 html body #lift-chat-box.lift-js-chatbox .lift-js-chatbox__icon {
   background-color: var(--sbg);
 }

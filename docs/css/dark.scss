@@ -36,6 +36,25 @@ html {
 		.progress {
 			background-color: var(--bg);
 		}
+		#content-menu {
+			background-color: var(--bg);
+			box-shadow: 0px 5px 12px -2px var(--sbg) !important;
+			border-color: var(--sbg) !important;
+		}
+		#content-menu .menu-separator {
+			border-color: rgba(0,0,0,.125) !important;
+		}
+		#content-menu .menu-btn {
+			color: var(--muted);
+		}
+		#content-menu .menu-item:hover .menu-btn {
+			background-color: var(--sbg);
+			border: 1px solid var(--box);
+			color: var(--white)
+		}
+		#content-menu .menu-item-disabled .menu-btn {
+			color: var(--colorin);
+		}
 		#lift-chat-box.lift-js-chatbox .lift-js-chatbox__icon {
 			background-color: var(--sbg);
 		}
