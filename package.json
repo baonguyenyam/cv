@@ -11,6 +11,9 @@
         "htmlminen": "html-minifier --collapse-whitespace ./docs/en/index.html -o ./docs/en/index.html",
         "win": "SET \"NODE_ENV=production\" && npm run clean && npm run concat && npm run autoprefixer && npm run concatjs && npm run nano && npm run nanojs && node index.js && npm run htmlmin && npm run htmlminen",
         "mac": "export NODE_ENV=production && npm run clean && npm run concat && npm run autoprefixer && npm run concatjs && npm run nano && npm run nanojs && node index.js && npm run htmlmin && npm run htmlminen",
+        "preprod": "npm run clean && npm run concat && npm run autoprefixer && npm run concatjs && npm run nano && npm run nanojs",
+        "endprod": "npm run htmlmin && npm run htmlminen",
+        "prod": "cross-env NODE_ENV=production npm run preprod && cross-env NODE_ENV=production node index.js && cross-env NODE_ENV=production npm run endprod",
         "update": "ncu -u && ncu -u -m bower && npm i && npm i sass node-sass && bower update"
     },
     "dependencies": {
