@@ -1,0 +1,192 @@
+:root {
+  --sbg: #0f0f0f;
+  --bg: #18191a;
+  --box: #242526;
+  --box2: #2d2e2f;
+  --border: #1b1c1d;
+  --hover: #3a3b3c;
+  --muted: #575757;
+  --colorin: #848484;
+  --main: #969696;
+  --texthover: #dbdbdb;
+  --white: #fff;
+}
+
+html {
+  background-color: var(--bg);
+}
+html body {
+  background-color: var(--bg);
+  color: var(--main);
+}
+html body .text-supper-muted,
+html body .timeline-info {
+  color: var(--hover);
+}
+html body .single-chart .circle-bg {
+  stroke: var(--bg);
+}
+html body #loading {
+  background-color: var(--sbg);
+  border-color: var(--sbg) !important;
+  color: var(--main);
+}
+html body #loading:before {
+  border: 4px var(--box) solid;
+  border-top: 4px #2c5eb7 solid;
+}
+html body .progress {
+  background-color: var(--bg);
+}
+html body #lift-chat-box.lift-js-chatbox .lift-js-chatbox__icon {
+  background-color: var(--sbg);
+}
+html body .bgtrans2 {
+  background: white;
+  background: -moz-linear-gradient(90deg, white 28%, #959595 51%, white 73%);
+  background: -webkit-linear-gradient(90deg, white 28%, #959595 51%, white 73%);
+  background: linear-gradient(90deg, white 28%, #959595 51%, white 73%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientBG2 5s ease infinite;
+  background-size: 300% 300%;
+}
+html body .h1, html body .h2, html body .h3, html body .h4, html body .h5, html body .h6, html body h1, html body h2, html body h3, html body h4, html body h5, html body h6 {
+  color: var(--texthover);
+}
+html body .box {
+  background-color: var(--box);
+  box-shadow: 0px 5px 12px -2px var(--border) !important;
+}
+html body blockquote span {
+  color: var(--texthover);
+}
+html body .text-dark,
+html body .menunguyen i {
+  color: var(--colorin) !important;
+}
+html body .badge-from-github .item span:first-child {
+  background-color: var(--border) !important;
+}
+html body .timeline-marker:after,
+html body .badge-from-github .item span:last-child {
+  background-color: var(--bg) !important;
+}
+html body #portfolio .card,
+html body .badge-from-github .item {
+  border-color: var(--sbg) !important;
+  color: var(--main);
+}
+html body .list-group-item,
+html body #portfolio .card,
+html body #nguyenTab .nav-link {
+  background-color: var(--box) !important;
+}
+html body .bg-light {
+  background-color: var(--box2) !important;
+}
+html body #nguyenTab .nav-link:not(.active) {
+  color: var(--colorin);
+}
+html body #nguyenTab .nav-link:not(.active):hover {
+  background-color: var(--border) !important;
+  box-shadow: 0 -3px 0 var(--hover) inset;
+  color: var(--colorin);
+}
+html body .border-top,
+html body .tab-content .tab-pane:not(#about),
+html body .social,
+html body .border,
+html body .border-bottom,
+html body .list-group-item.active {
+  border-color: rgba(0, 0, 0, 0.125) !important;
+}
+html body .list-group-item.active {
+  background-color: var(--sbg) !important;
+  color: var(--muted);
+}
+html body .modal-content .modal-header {
+  background-color: var(--sbg) !important;
+  color: var(--muted);
+}
+html body .modal-content .modal-header .close {
+  color: var(--white);
+  text-shadow: none;
+}
+html body .modal-content {
+  background-color: var(--box) !important;
+  box-shadow: 0px 5px 12px -2px var(--sbg) !important;
+}
+html body .modal-content .modal-header,
+html body .modal-content {
+  border-color: rgba(0, 0, 0, 0.125) !important;
+}
+html body .modal-backdrop.show {
+  opacity: 0.1;
+  background-color: #fff;
+}
+html body .btn-light {
+  color: var(--colorin);
+  background-color: var(--box);
+  border-color: var(--box);
+}
+html body .btn-light:hover, html body .btn-light:focus, html body .btn-light:active {
+  color: var(--sbg) !important;
+  background-color: var(--hover) !important;
+  border-color: var(--hover) !important;
+}
+html body .btn-outline-primary {
+  border-color: var(--colorin);
+  color: var(--colorin);
+}
+html body .btn-outline-primary:hover, html body .btn-outline-primary:focus, html body .btn-outline-primary:active {
+  border-color: var(--sbg);
+  background-color: var(--sbg);
+  color: var(--colorin);
+}
+html body .tag {
+  box-shadow: 0 0 0 2px var(--bg);
+  background-color: var(--border) !important;
+}
+html body .tag span {
+  color: var(--colorin) !important;
+}
+html body .timeline-position {
+  background-color: var(--bg) !important;
+  box-shadow: 0 0 0 1px var(--sbg);
+  color: var(--colorin) !important;
+}
+html body .viewmore {
+  background-color: var(--border) !important;
+  box-shadow: 0 0 0 2px var(--bg);
+  color: var(--colorin) !important;
+}
+html body .viewmore:hover, html body .viewmore:focus, html body .viewmore:active {
+  box-shadow: 0 0 0 2px var(--sbg);
+  background-color: var(--box) !important;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--box);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hover);
+  height: 100px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2c5eb7;
+}
