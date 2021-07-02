@@ -903,6 +903,20 @@ $(document).ready(function () {
 		},
 		(xhr) => {}
 	);
+
+
+	$('#nguyenTab a').on('click', function (event) {
+		event.preventDefault()
+		if($(this).hasClass('active')) {
+			$('#loading').addClass('d-none')
+		} else {
+			$('#loading').removeClass('d-none')
+		}
+		$('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+			$('#loading').addClass('d-none')
+		})
+	})
+
 });
 
 // CONTEXT MENU
@@ -930,3 +944,26 @@ function onMouseDown(e){
 }
 
 document.addEventListener('contextmenu', onContextMenu, false);
+
+
+// Disable HOT KEY
+var isCtrl = false;
+document.onkeyup=function(e){
+    if(e.keyCode == 17) isCtrl=false;
+}
+document.onkeydown=function(e){
+    if(e.keyCode == 17) isCtrl=true;
+    if((e.keyCode == 83 && isCtrl == true) || (e.keyCode == 73 && isCtrl == true) || e.keyCode == 123) {
+        return false;
+    }
+}
+document.addEventListener("keydown", function(e) {
+	if (((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey) && e.keyCode == 83) || ((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey) && e.keyCode == 73) || e.keyCode == 123) {
+	  e.preventDefault();
+	}
+  }, false);
+window.addEventListener("keypress", function(event) {
+	if (!(event.which == 115 && event.ctrlKey) && !(event.which == 19)) return true
+	event.preventDefault()
+	return false
+})
