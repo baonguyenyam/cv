@@ -904,3 +904,29 @@ $(document).ready(function () {
 		(xhr) => {}
 	);
 });
+
+// CONTEXT MENU
+var contentmenu = document.querySelector('.menu');
+
+function showMenu(x, y){
+    contentmenu.style.left = x + 'px';
+    contentmenu.style.top = y + 'px';
+    contentmenu.classList.add('menu-show');
+}
+
+function hideMenu(){
+    contentmenu.classList.remove('menu-show');
+}
+
+function onContextMenu(e){
+    e.preventDefault();
+    showMenu(e.pageX, e.pageY);
+    document.addEventListener('click', onMouseDown, false);
+}
+
+function onMouseDown(e){
+    hideMenu();
+    document.removeEventListener('click', onMouseDown);
+}
+
+document.addEventListener('contextmenu', onContextMenu, false);

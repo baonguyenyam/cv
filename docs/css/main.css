@@ -389,6 +389,7 @@ html,
 body {
 	background-color: #e2e1e0;
 	font-weight: 400;
+	overflow-x: hidden;
 }
 b,
 strong {
@@ -1195,7 +1196,7 @@ body * {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #a9b9d6;
+	background: #007bff;
 }
 .highlight {
     text-decoration: underline dotted #e9087f;
@@ -1211,4 +1212,100 @@ body * {
 	text-decoration: underline dotted #007bff;
 	color: #e9087f;
 	cursor: crosshair;
+}
+
+
+.menu {
+    position: absolute;
+    width: 200px;
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #dfdfdf;
+    background: #fff;
+    z-index: 100;
+    border-radius: 10px;
+    box-shadow: 0px 5px 12px -2px rgb(0 0 0 / 37%) !important;
+    opacity: 0;
+    transform: translate(0, 15px) scale(.95);
+    transition: transform 0.01s ease-out, opacity 0.01s ease-out;
+    pointer-events: none;
+}
+
+.menu-item {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.menu-btn {
+    display: block;
+    color: #444444;
+	font-size: .8rem;
+	line-height: 1;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 8px 8px;
+    border-radius: 3px;
+}
+
+a.menu-btn {
+    outline: 0 none;
+    text-decoration: none;
+}
+
+.menu-item:hover > .menu-btn {
+    color: #283b70;
+    outline: none;
+    background-color: #d0dffc;
+    border: 1px solid #a9b9d6;
+}
+
+.menu-item-disabled {
+    opacity: .5;
+    pointer-events: none;
+	font-weight: bold;
+}
+
+.menu-item-disabled .menu-btn {
+    cursor: default;
+}
+
+.menu-separator {
+    display:block;
+    margin: 3px 0 6px 0;
+    height:1px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-item-submenu::after {
+    content: "";
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-left-color: #808080;
+}
+
+.menu-item-submenu:hover::after {
+    border-left-color: #fff;
+}
+
+.menu .menu {
+    top: 4px;
+    left: 99%;
+}
+
+.menu-show,
+.menu-item:hover > .menu {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    pointer-events: auto;
+}
+
+.menu-item:hover > .menu {
+    transition-delay: 300ms;
 }
