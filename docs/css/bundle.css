@@ -2036,7 +2036,7 @@ h6 {
 
 @media (max-width: 575px) {
 	#nguyenTabContent {
-		border-top: 1px solid #dee2e6;
+		/* border-top: 1px solid #dee2e6; */
 	}
 }
 blockquote span {
