@@ -1793,6 +1793,8 @@ body * {
 	transform: translate(0, 15px) scale(0.95);
 	transition: transform 0.01s ease-out, opacity 0.01s ease-out;
 	pointer-events: none;
+	top:0;
+	left: 0
 }
 
 .menu-item {
