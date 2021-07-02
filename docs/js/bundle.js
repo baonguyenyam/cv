@@ -1723,17 +1723,6 @@ LIFTReady(() => {
 
 });
 
-console.log('%cNGUYEN', 'font-size:100px;color:#ff451a;text-shadow:0 1px 0 #f73936,0 2px 0 #f73936 ,0 3px 0 #f73936 ,0 4px 0 #f73936 ,0 5px 0 #f73936 ,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);')
-console.log('%c NGUYEN ' + '%c - The best Web Solutions Provider', 'border-radius: 2px; padding: 3px; background: #ff451a; color: #FFF', 'color: #ff451a')
-console.warn("NGUYEN warning: This is a browser feature intended for developers. If someone told you to copy and paste something here to enable a NGUYEN feature or 'hack' someone's account, it is a scam and will give them access to your NGUYEN account.")
-// document.onkeyup = function (e) {
-// 	var e = e || window.event;
-// 	if (e.altKey && e.ctrlKey && e.shiftKey && e.which == 13) {
-// 		$('body')
-// 		alert('NGUYEN PHAM - +(1) 682 203 1334\nEmail: baonguyenyam@gmail.com\nWeb: baonguyenyam.github.io')
-// 		return false;
-// 	}
-// };
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 })
@@ -1758,6 +1747,18 @@ if($('#text-replace-vn').length) {
 	});
 }
 
+function setTheme() {
+	var head = document.getElementsByTagName('HEAD')[0];
+	var link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.setAttribute("id", "nguyen-theme");
+	link.type = 'text/css';
+	link.href = '/cv/css/dist/dark.min.css';
+	head.appendChild(link);
+}
+function removeTheme() {
+	$('#nguyen-theme').remove()
+}
 
 /////////////////////////////////////////////////////
 /////////////////////  ICON MENU  //////////////////////
@@ -1977,6 +1978,22 @@ $(document).ready(function () {
 		})
 	})
 
+	$('#themtoggle').on('click', function (event) {
+		if(localStorage.getItem("nguyenTheme")) {
+			localStorage.removeItem('nguyenTheme');
+			removeTheme()
+		} else {
+			localStorage.setItem('nguyenTheme', 'true');
+			setTheme()
+		}
+	})
+
+
+	if(localStorage.getItem("nguyenTheme")) {
+		setTheme()
+		$('#themtoggle').prop('checked', true);
+	}
+
 });
 
 // CONTEXT MENU
@@ -2043,3 +2060,15 @@ function __nDe(a) {
 document.onkeyup = function (a) {
     if ((a = a || window.event).altKey && a.ctrlKey && a.shiftKey && 13 == a.which) return $("body"), $('#infoMeModal').modal('show'), undefined
 };
+
+console.log('%cNGUYEN', 'font-size:100px;color:#ff451a;text-shadow:0 1px 0 #f73936,0 2px 0 #f73936 ,0 3px 0 #f73936 ,0 4px 0 #f73936 ,0 5px 0 #f73936 ,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);')
+console.log('%c NGUYEN ' + '%c - The best Web Solutions Provider', 'border-radius: 2px; padding: 3px; background: #ff451a; color: #FFF', 'color: #ff451a')
+console.warn("NGUYEN warning: This is a browser feature intended for developers. If someone told you to copy and paste something here to enable a NGUYEN feature or 'hack' someone's account, it is a scam and will give them access to your NGUYEN account.")
+// document.onkeyup = function (e) {
+// 	var e = e || window.event;
+// 	if (e.altKey && e.ctrlKey && e.shiftKey && e.which == 13) {
+// 		$('body')
+// 		alert('NGUYEN PHAM - +(1) 682 203 1334\nEmail: baonguyenyam@gmail.com\nWeb: baonguyenyam.github.io')
+// 		return false;
+// 	}
+// };

@@ -1,0 +1,211 @@
+:root {
+	--sbg: #0f0f0f;
+	--bg: #18191a;
+	--box: #242526;
+	--box2: #2d2e2f;
+	--border: #1b1c1d;
+	--hover: #3a3b3c;
+	--muted: #575757;
+	--colorin: #848484;
+	--main: #969696;
+	--texthover: #dbdbdb;
+	--white: #fff;
+}
+
+html {
+	background-color: var(--bg);
+	body {
+		background-color: var(--bg);
+		color:var(--main);
+		.text-supper-muted,
+		.timeline-info {
+			color: var(--hover);
+		}
+		.single-chart .circle-bg {
+			stroke: var(--bg);
+		}
+		#loading {
+			background-color: var(--sbg);
+			border-color: var(--sbg) !important;
+			color:var(--main);
+			&:before {
+				border: 4px var(--box) solid;
+    			border-top: 4px #2c5eb7 solid;
+			}
+		}
+		.progress {
+			background-color: var(--bg);
+		}
+		#lift-chat-box.lift-js-chatbox .lift-js-chatbox__icon {
+			background-color: var(--sbg);
+		}
+		.bgtrans2 {
+			background: rgb(255,255,255);
+			background: -moz-linear-gradient(
+				90deg,
+				rgba(255,255,255, 1) 28%,
+				rgba(149, 149, 149, 1) 51%,
+				rgba(255,255,255, 1) 73%
+			);
+			background: -webkit-linear-gradient(
+				90deg,
+				rgba(255,255,255, 1) 28%,
+				rgba(149, 149, 149, 1) 51%,
+				rgba(255,255,255, 1) 73%
+			);
+			background: linear-gradient(
+				90deg,
+				rgba(255,255,255, 1) 28%,
+				rgba(149, 149, 149, 1) 51%,
+				rgba(255,255,255, 1) 73%
+			);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+			color: transparent;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			animation: gradientBG2 5s ease infinite;
+			background-size: 300% 300%;
+		}
+		.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+			color: var(--texthover)
+		}
+		.box {
+			background-color: var(--box);
+			box-shadow: 0px 5px 12px -2px var(--border) !important;
+		}
+		blockquote span {
+			color: var(--texthover)
+		}
+		.text-dark,
+		.menunguyen i {
+			color: var(--colorin) !important
+		}
+		.badge-from-github .item span:first-child {
+			background-color: var(--border) !important;
+		}
+		.timeline-marker:after,
+		.badge-from-github .item span:last-child {
+			background-color: var(--bg) !important;
+		}
+		#portfolio .card,
+		.badge-from-github .item {
+			border-color: var(--sbg) !important;
+			color: var(--main)
+		}
+		.list-group-item,
+		#portfolio .card,
+		#nguyenTab .nav-link {
+			background-color: var(--box) !important;
+		}
+		.bg-light {
+			background-color: var(--box2) !important;
+		}
+		#nguyenTab .nav-link:not(.active) {
+			color: var(--colorin);
+			&:hover {
+				background-color: var(--border) !important;
+				box-shadow: 0 -3px 0 var(--hover) inset;
+				color: var(--colorin);
+			}
+		}
+		.border-top,
+		.tab-content .tab-pane:not(#about),
+		.social,
+		.border,
+		.border-bottom,
+		.list-group-item.active {
+			border-color: rgba(0,0,0,.125) !important;
+		}
+		.list-group-item.active {
+			background-color: var(--sbg) !important;
+			color: var(--muted);
+		}
+		.modal-content .modal-header {
+			background-color: var(--sbg) !important;
+			color: var(--muted);
+			.close {
+				color: var(--white);
+				text-shadow: none
+			}
+		}
+		.modal-content {
+			background-color: var(--box) !important;
+			box-shadow: 0px 5px 12px -2px var(--sbg) !important;
+		}
+		.modal-content .modal-header,
+		.modal-content {
+			border-color: rgba(0,0,0,.125) !important;
+		}
+		.modal-backdrop.show {
+			opacity: .1;
+			background-color: #fff;
+		}
+		.btn-light {
+			color: var(--colorin);
+			background-color: var(--box);
+			border-color: var(--box);
+			&:hover,
+			&:focus,
+			&:active {
+				color: var(--sbg) !important;
+				background-color: var(--hover) !important;
+				border-color: var(--hover) !important;
+			}
+		}
+		.btn-outline-primary {
+			border-color: var(--colorin);
+			color: var(--colorin);
+			&:hover,
+			&:focus,
+			&:active {
+				border-color: var(--sbg);
+				background-color: var(--sbg);
+				color: var(--colorin);
+			}
+		}
+		.tag {
+			box-shadow: 0 0 0 2px var(--bg);
+			background-color: var(--border) !important;
+			span {
+				color: var(--colorin) !important;
+			}
+		}
+		.timeline-position {
+			background-color: var(--bg) !important;
+			box-shadow: 0 0 0 1px var(--sbg);
+			color: var(--colorin) !important;
+		}
+		.viewmore {
+			background-color: var(--border) !important;
+			box-shadow: 0 0 0 2px var(--bg);
+			color: var(--colorin) !important;
+			&:hover,
+			&:focus,
+			&:active {
+				box-shadow: 0 0 0 2px var(--sbg);
+				background-color: var(--box) !important;
+			}
+		}
+	}
+}
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+::-webkit-scrollbar {
+	height: 7px;
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--box);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--hover);
+	height: 100px;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #2c5eb7;
+}

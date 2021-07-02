@@ -3,7 +3,7 @@
         "clean": "rimraf ./docs/index.html ./docs/en/index.html",
         "start": "npm run clean && node index.js",
         "concat": "concat -o ./docs/css/bundle.css ./docs/css/bootstrap.min.css ./docs/css/bootstrap/bootstrap-icons.css ./docs/css/jquery.fancybox.min.css ./docs/css/chat.css ./docs/css/main.css",
-        "concatjs": "concat -o ./docs/js/bundle.js ./docs/js/jquery.min.js ./docs/js/popper.min.js  ./docs/js/bootstrap.min.js  ./docs/js/typed.min.js ./docs/js/jquery.fancybox.min.js ./docs/js/domChange.js ./docs/js/domReady.js ./docs/js/encode.js ./docs/js/animateAnything.js ./docs/js/chat.js ./docs/js/main.js",
+        "concatjs": "concat -o ./docs/js/bundle.js ./docs/js/jquery.min.js ./docs/js/popper.min.js  ./docs/js/bootstrap.min.js  ./docs/js/typed.min.js ./docs/js/jquery.fancybox.min.js ./docs/js/domChange.js ./docs/js/domReady.js ./docs/js/encode.js ./docs/js/animateAnything.js ./docs/js/chat.js ./docs/js/main.js ./docs/js/dev.js",
         "nano": "cssnano ./docs/css/bundle.css ./docs/css/bundle.min.css",
         "autoprefixer": "autoprefixer-cli -o ./docs/css/bundle.css ./docs/css/bundle.css",
         "nanojs": "uglifyjs ./docs/js/bundle.js -o ./docs/js/bundle.min.js",

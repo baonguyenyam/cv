@@ -1387,6 +1387,7 @@ body * {
 }
 .progress .progress-bar {
 	border-radius: 10px;
+	overflow: hidden;
 }
 .single-chart {
 	justify-content: space-around;
@@ -1913,4 +1914,51 @@ a.menu-btn {
 @keyframes spCircRot {
 	from { transform: rotate(0deg); }
 	to { transform: rotate(359deg); }
+}
+
+.form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: .125rem;
+}
+.form-switch {
+    padding-left: 2.5em;
+}
+.form-check-input {
+	cursor: pointer;
+    width: 1em;
+    height: 1em;
+    margin-top: .25em;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid rgba(0,0,0,.25);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+.form-check .form-check-input {
+    float: left;
+    margin-left: -1.5em;
+}
+.form-check-input:checked {
+    background-color: #2c5eb7;
+    border-color: #2c5eb7;
+}
+.form-switch .form-check-input {
+    width: 2em;
+    margin-left: -2em;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+    background-position: left center;
+    border-radius: 2em;
+    transition: background-position .15s ease-in-out;
+}
+.form-switch .form-check-input:checked {
+    background-position: right center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
