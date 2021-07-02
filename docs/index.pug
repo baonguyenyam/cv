@@ -17,7 +17,7 @@ doctype html
 	Serial Number: #{key.slice(70, 75).toUpperCase()}-#{key.slice(80, 85).toUpperCase()}-#{key.slice(90, 95).toUpperCase()}-#{key.slice(40, 45).toUpperCase()}-#{key.slice(30, 35).toUpperCase()}
 	Hash Key: #{key}
 	License Key: #{key.slice(50, 100)}__________#{key.slice(70, 170)}_#{key}____#{key}#{key}________#{key.slice(0, 50)}
-html(serial-key=key.slice(70, 75).toUpperCase()+'-'+key.slice(80, 85).toUpperCase()+'-'+key.slice(90, 95).toUpperCase()+'-'+key.slice(40, 45).toUpperCase()+'-'+key.slice(30, 35).toUpperCase(), hash-key=key, platform=platform, openssl=version.openssl, unicode=version.unicode, http2=version.nghttp2, chrome-v8=version.v8, http-parser=version.http_parser,  zlib=version.zlib,  modules=version.modules,  nodejs=version.node, cpu=cpu.user, system=cpu.system, memory-rss=memory.rss, memory-heaptotal=memory.heapTotal, memory-heapused=memory.heapUsed, memory-external=memory.external, lang='en')
+html(serial-key=key.slice(70, 75).toUpperCase()+'-'+key.slice(80, 85).toUpperCase()+'-'+key.slice(90, 95).toUpperCase()+'-'+key.slice(40, 45).toUpperCase()+'-'+key.slice(30, 35).toUpperCase(), hash-key=key, platform=platform, openssl=version.openssl, unicode=version.unicode, http2=version.nghttp2, chrome-v8=version.v8, http-parser=version.http_parser,  zlib=version.zlib,  modules=version.modules,  nodejs=version.node, cpu=cpu.user, system=cpu.system, memory-rss=memory.rss, memory-heaptotal=memory.heapTotal, memory-heapused=memory.heapUsed, memory-external=memory.external, lang='vi')
 	- var text = Math.random()
 	- var hash = key
 	head(hash-key=hash.slice(50, 100))
@@ -30,7 +30,7 @@ html(serial-key=key.slice(70, 75).toUpperCase()+'-'+key.slice(80, 85).toUpperCas
 		meta(name='msapplication-TileColor', content='#48a4bc')
 		meta(name='msapplication-TileImage', content='/favicon/ms-icon-144x144.png?v='+text)
 		meta(name='theme-color', content='#48a4bc')
-		title Nguyen Pham - Curriculum Vitae
+		title Nguyen Pham - Hồ sơ năng lực
 		link(rel='apple-touch-icon', sizes='57x57', href='/favicon/apple-icon-57x57.png?v='+text)
 		link(rel='apple-touch-icon', sizes='60x60', href='/favicon/apple-icon-60x60.png?v='+text)
 		link(rel='apple-touch-icon', sizes='72x72', href='/favicon/apple-icon-72x72.png?v='+text)
@@ -110,7 +110,7 @@ html(serial-key=key.slice(70, 75).toUpperCase()+'-'+key.slice(80, 85).toUpperCas
 		if process.env.NODE_ENV === 'production'
 		else
 			include layout/includes/js
-	body(license-key=key.slice(50, 100)+"__________"+key.slice(70, 170)+"_____"+key+"____"+key+key+"________"+key.slice(0, 50))
+	body#lang-vn(license-key=key.slice(50, 100)+"__________"+key.slice(70, 170)+"_____"+key+"____"+key+key+"________"+key.slice(0, 50))
 		if process.env.NODE_ENV === 'production'
 			script(key=hash.slice(10, 150))
 				include cv.js
