@@ -2118,8 +2118,8 @@ h6 {
 }
 
 .progress .progress-bar {
-	animation: loadbar 6s;
-	-webkit-animation: loadbar 6s;
+	/* animation: loadbar 6s;
+	-webkit-animation: loadbar 6s; */
 	background-color: #2c5eb7;
 }
 
@@ -2130,6 +2130,19 @@ a {
 @keyframes loadbar {
 	0% {
 		width: 0%;
+		background-color: #d34040;
+	}
+	20% {
+		background-color: #ffc107;
+	}
+	40% {
+		background-color: #4cc790;
+	}
+	60% {
+		background-color: #4caf50;
+	}
+	80% {
+		background-color: #2c5eb7;
 	}
 }
 
@@ -2507,11 +2520,24 @@ body * {
 	fill: none;
 	stroke-width: 1.8;
 	stroke-linecap: round;
-	animation: progress 6s ease-out forwards;
+	/* animation: progress 6s ease-out forwards; */
 }
 @keyframes progress {
 	0% {
 		stroke-dasharray: 0 100;
+		stroke: #d34040;
+	}
+	20% {
+		stroke: #ffc107;
+	}
+	40% {
+		stroke: #4cc790;
+	}
+	60% {
+		stroke: #4caf50;
+	}
+	80% {
+		stroke: #2c5eb7;
 	}
 }
 .single-chart .circular-chart.sliver .circle {
@@ -3070,3 +3096,30 @@ a.menu-btn {
     background-position: right center;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
+
+.animatable {
+
+	/* initially hide animatable objects */
+	visibility: hidden;
+
+	/* initially pause animatable objects their animations */
+	animation-play-state: paused;
+  }
+  .progress-bar.animated {
+	  animation: loadbar 6s;
+	  -webkit-animation: loadbar 6s;
+  }
+  .single-chart .circle.animated {
+	animation: progress 6s ease-out forwards;
+}
+  .animated {
+	visibility: visible;
+	animation-fill-mode: both;
+
+	/* -webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-ms-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s; */
+	animation-play-state: running;
+  }
