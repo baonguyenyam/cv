@@ -212,7 +212,7 @@ $(document).ready(function () {
 		$('#nguyenTab a[href="#' + $(this).attr("todata") + '"]').tab('show');
 		$('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
 			$('html, body').animate({
-				scrollTop: $("#viewcontent").offset().top - 150
+				scrollTop: $("#viewcontent").offset().top - 250
 			}, 100);
 		})
 		$('#nguyentopBar button').trigger('click')
