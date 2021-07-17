@@ -2462,6 +2462,7 @@ a {
 }
 body {
 	padding-top: 56px;
+	top: initial !important;
 }
 body * {
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -3139,4 +3140,7 @@ a.menu-btn {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  .skiptranslate iframe {
+	  /* display: none; */
   }
