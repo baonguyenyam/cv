@@ -301,3 +301,13 @@ jQuery(function($) {
 	$(window).trigger('scroll');
 
   });
+
+  
+$(window).scroll(function(event){
+	var st = $(this).scrollTop();
+	if (st > 0){
+	 $('#nguyentopBar').addClass('active')
+	} else {
+	 $('#nguyentopBar').removeClass('active')
+	}
+ });

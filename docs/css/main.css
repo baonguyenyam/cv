@@ -1,111 +1,133 @@
 /* line 6, ../sass/_content.sass */
 .offline-ui .offline-ui-retry:before {
 	content: "Reconnect";
-  }
-  /* line 11, ../sass/_content.sass */
-  .offline-ui.offline-ui-up .offline-ui-content:before {
+}
+/* line 11, ../sass/_content.sass */
+.offline-ui.offline-ui-up .offline-ui-content:before {
 	content: "Your computer is connected to the internet.";
-  }
-  @media (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
 	/* line 11, ../sass/_content.sass */
 	.offline-ui.offline-ui-up .offline-ui-content:before {
-	  content: "Your device is connected to the internet.";
+		content: "Your device is connected to the internet.";
 	}
-  }
-  @media (max-width: 568px) {
+}
+@media (max-width: 568px) {
 	/* line 11, ../sass/_content.sass */
 	.offline-ui.offline-ui-up .offline-ui-content:before {
-	  content: "Your device is connected.";
+		content: "Your device is connected.";
 	}
-  }
-  /* line 22, ../sass/_content.sass */
-  .offline-ui.offline-ui-down .offline-ui-content:before {
+}
+/* line 22, ../sass/_content.sass */
+.offline-ui.offline-ui-down .offline-ui-content:before {
 	content: "Your computer lost its internet connection.";
-  }
-  @media (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
 	/* line 22, ../sass/_content.sass */
 	.offline-ui.offline-ui-down .offline-ui-content:before {
-	  content: "Your device lost its internet connection.";
+		content: "Your device lost its internet connection.";
 	}
-  }
-  @media (max-width: 568px) {
+}
+@media (max-width: 568px) {
 	/* line 22, ../sass/_content.sass */
 	.offline-ui.offline-ui-down .offline-ui-content:before {
-	  content: "Your device isn't connected.";
+		content: "Your device isn't connected.";
 	}
-  }
-  /* line 33, ../sass/_content.sass */
-  .offline-ui.offline-ui-down.offline-ui-connecting .offline-ui-content:before, .offline-ui.offline-ui-down.offline-ui-connecting-2s .offline-ui-content:before {
+}
+/* line 33, ../sass/_content.sass */
+.offline-ui.offline-ui-down.offline-ui-connecting .offline-ui-content:before,
+.offline-ui.offline-ui-down.offline-ui-connecting-2s
+	.offline-ui-content:before {
 	content: "Attempting to reconnect...";
-  }
-  /* line 42, ../sass/_content.sass */
-  .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="second"]:before {
-	content: "Connection lost. Reconnecting in " attr(data-retry-in-value) " seconds...";
-  }
-  @media (max-width: 568px) {
+}
+/* line 42, ../sass/_content.sass */
+.offline-ui.offline-ui-down.offline-ui-waiting
+	.offline-ui-content[data-retry-in-unit="second"]:before {
+	content: "Connection lost. Reconnecting in " attr(data-retry-in-value)
+		" seconds...";
+}
+@media (max-width: 568px) {
 	/* line 42, ../sass/_content.sass */
-	.offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="second"]:before {
-	  content: "Reconnecting in " attr(data-retry-in-value) "s...";
+	.offline-ui.offline-ui-down.offline-ui-waiting
+		.offline-ui-content[data-retry-in-unit="second"]:before {
+		content: "Reconnecting in " attr(data-retry-in-value) "s...";
 	}
-  }
-  /* line 50, ../sass/_content.sass */
-  .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="second"][data-retry-in-value="1"]:before {
-	content: "Connection lost. Reconnecting in " attr(data-retry-in-value) " second...";
-  }
-  @media (max-width: 568px) {
+}
+/* line 50, ../sass/_content.sass */
+.offline-ui.offline-ui-down.offline-ui-waiting
+	.offline-ui-content[data-retry-in-unit="second"][data-retry-in-value="1"]:before {
+	content: "Connection lost. Reconnecting in " attr(data-retry-in-value)
+		" second...";
+}
+@media (max-width: 568px) {
 	/* line 50, ../sass/_content.sass */
-	.offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="second"][data-retry-in-value="1"]:before {
-	  content: "Reconnecting in " attr(data-retry-in-value) "s...";
+	.offline-ui.offline-ui-down.offline-ui-waiting
+		.offline-ui-content[data-retry-in-unit="second"][data-retry-in-value="1"]:before {
+		content: "Reconnecting in " attr(data-retry-in-value) "s...";
 	}
-  }
-  /* line 58, ../sass/_content.sass */
-  .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="minute"]:before {
-	content: "Connection lost. Reconnecting in " attr(data-retry-in-value) " minutes...";
-  }
-  @media (max-width: 568px) {
+}
+/* line 58, ../sass/_content.sass */
+.offline-ui.offline-ui-down.offline-ui-waiting
+	.offline-ui-content[data-retry-in-unit="minute"]:before {
+	content: "Connection lost. Reconnecting in " attr(data-retry-in-value)
+		" minutes...";
+}
+@media (max-width: 568px) {
 	/* line 58, ../sass/_content.sass */
-	.offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="minute"]:before {
-	  content: "Reconnecting in " attr(data-retry-in-value) "m...";
+	.offline-ui.offline-ui-down.offline-ui-waiting
+		.offline-ui-content[data-retry-in-unit="minute"]:before {
+		content: "Reconnecting in " attr(data-retry-in-value) "m...";
 	}
-  }
-  /* line 66, ../sass/_content.sass */
-  .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="minute"][data-retry-in-value="1"]:before {
-	content: "Connection lost. Reconnecting in " attr(data-retry-in-value) " minute...";
-  }
-  @media (max-width: 568px) {
+}
+/* line 66, ../sass/_content.sass */
+.offline-ui.offline-ui-down.offline-ui-waiting
+	.offline-ui-content[data-retry-in-unit="minute"][data-retry-in-value="1"]:before {
+	content: "Connection lost. Reconnecting in " attr(data-retry-in-value)
+		" minute...";
+}
+@media (max-width: 568px) {
 	/* line 66, ../sass/_content.sass */
-	.offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="minute"][data-retry-in-value="1"]:before {
-	  content: "Reconnecting in " attr(data-retry-in-value) "m...";
+	.offline-ui.offline-ui-down.offline-ui-waiting
+		.offline-ui-content[data-retry-in-unit="minute"][data-retry-in-value="1"]:before {
+		content: "Reconnecting in " attr(data-retry-in-value) "m...";
 	}
-  }
-  /* line 74, ../sass/_content.sass */
-  .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="hour"]:before {
-	content: "Connection lost. Reconnecting in " attr(data-retry-in-value) " hours...";
-  }
-  @media (max-width: 568px) {
+}
+/* line 74, ../sass/_content.sass */
+.offline-ui.offline-ui-down.offline-ui-waiting
+	.offline-ui-content[data-retry-in-unit="hour"]:before {
+	content: "Connection lost. Reconnecting in " attr(data-retry-in-value)
+		" hours...";
+}
+@media (max-width: 568px) {
 	/* line 74, ../sass/_content.sass */
-	.offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="hour"]:before {
-	  content: "Reconnecting in " attr(data-retry-in-value) "h...";
+	.offline-ui.offline-ui-down.offline-ui-waiting
+		.offline-ui-content[data-retry-in-unit="hour"]:before {
+		content: "Reconnecting in " attr(data-retry-in-value) "h...";
 	}
-  }
-  /* line 82, ../sass/_content.sass */
-  .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="hour"][data-retry-in-value="1"]:before {
-	content: "Connection lost. Reconnecting in " attr(data-retry-in-value) " hour...";
-  }
-  @media (max-width: 568px) {
+}
+/* line 82, ../sass/_content.sass */
+.offline-ui.offline-ui-down.offline-ui-waiting
+	.offline-ui-content[data-retry-in-unit="hour"][data-retry-in-value="1"]:before {
+	content: "Connection lost. Reconnecting in " attr(data-retry-in-value)
+		" hour...";
+}
+@media (max-width: 568px) {
 	/* line 82, ../sass/_content.sass */
-	.offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="hour"][data-retry-in-value="1"]:before {
-	  content: "Reconnecting in " attr(data-retry-in-value) "h...";
+	.offline-ui.offline-ui-down.offline-ui-waiting
+		.offline-ui-content[data-retry-in-unit="hour"][data-retry-in-value="1"]:before {
+		content: "Reconnecting in " attr(data-retry-in-value) "h...";
 	}
-  }
-  /* line 90, ../sass/_content.sass */
-  .offline-ui.offline-ui-down.offline-ui-reconnect-failed-2s.offline-ui-waiting .offline-ui-retry {
+}
+/* line 90, ../sass/_content.sass */
+.offline-ui.offline-ui-down.offline-ui-reconnect-failed-2s.offline-ui-waiting
+	.offline-ui-retry {
 	display: none;
-  }
-  /* line 93, ../sass/_content.sass */
-  .offline-ui.offline-ui-down.offline-ui-reconnect-failed-2s .offline-ui-content:before {
+}
+/* line 93, ../sass/_content.sass */
+.offline-ui.offline-ui-down.offline-ui-reconnect-failed-2s
+	.offline-ui-content:before {
 	content: "Connection attempt failed.";
-  }
+}
 
 .offline-ui,
 .offline-ui *,
@@ -1834,8 +1856,8 @@ body * {
 	transform: translate(0, 15px) scale(0.95);
 	transition: transform 0.01s ease-out, opacity 0.01s ease-out;
 	pointer-events: none;
-	top:0;
-	left: 0
+	top: 0;
+	left: 0;
 }
 
 .menu-item {
@@ -1928,13 +1950,13 @@ a.menu-btn {
 	color: #2c5eb7;
 	z-index: 9999999;
 	background: #fff;
-    border: 1px solid #c7c7c7;
-    border-radius: 3px;
-    padding: 5px 10px;
+	border: 1px solid #c7c7c7;
+	border-radius: 3px;
+	padding: 5px 10px;
 }
 #loading:before {
 	display: inline-block;
-	content: '';
+	content: "";
 	width: 22px;
 	height: 22px;
 	clear: both;
@@ -1942,69 +1964,75 @@ a.menu-btn {
 	border: 4px #a9b9d6 solid;
 	border-top: 4px #2c5eb7 solid;
 	border-radius: 50%;
-	-webkit-animation: spCircRot .6s infinite linear;
-	animation: spCircRot .6s infinite linear;
-	margin-right: .5rem;
-
+	-webkit-animation: spCircRot 0.6s infinite linear;
+	animation: spCircRot 0.6s infinite linear;
+	margin-right: 0.5rem;
 }
 @-webkit-keyframes spCircRot {
-	from { -webkit-transform: rotate(0deg); }
-	to { -webkit-transform: rotate(359deg); }
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+	}
 }
 @keyframes spCircRot {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(359deg); }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
 }
 
 .form-check {
-    display: block;
-    min-height: 1.5rem;
-    padding-left: 1.5em;
-    margin-bottom: .125rem;
+	display: block;
+	min-height: 1.5rem;
+	padding-left: 1.5em;
+	margin-bottom: 0.125rem;
 }
 .form-switch {
-    padding-left: 2.5em;
+	padding-left: 2.5em;
 }
 .form-check-input {
 	cursor: pointer;
-    width: 1em;
-    height: 1em;
-    margin-top: .25em;
-    vertical-align: top;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    border: 1px solid rgba(0,0,0,.25);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-print-color-adjust: exact;
-    color-adjust: exact;
+	width: 1em;
+	height: 1em;
+	margin-top: 0.25em;
+	vertical-align: top;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-print-color-adjust: exact;
+	color-adjust: exact;
 }
 .form-check .form-check-input {
-    float: left;
-    margin-left: -1.5em;
+	float: left;
+	margin-left: -1.5em;
 }
 .form-check-input:checked {
-    background-color: #2c5eb7;
-    border-color: #2c5eb7;
+	background-color: #2c5eb7;
+	border-color: #2c5eb7;
 }
 .form-switch .form-check-input {
-    width: 2em;
-    margin-left: -2em;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
-    background-position: left center;
-    border-radius: 2em;
-    transition: background-position .15s ease-in-out;
+	width: 2em;
+	margin-left: -2em;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+	background-position: left center;
+	border-radius: 2em;
+	transition: background-position 0.15s ease-in-out;
 }
 .form-switch .form-check-input:checked {
-    background-position: right center;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+	background-position: right center;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
 .animatable {
-
 	/* initially hide animatable objects */
 	visibility: hidden;
 
@@ -2014,15 +2042,15 @@ a.menu-btn {
 	-ms-animation-play-state: paused;
 	-o-animation-play-state: paused;
 	animation-play-state: paused;
-  }
-  .progress-bar.animated {
-	  animation: loadbar 6s;
-	  -webkit-animation: loadbar 6s;
-  }
-  .single-chart .circle.animated {
+}
+.progress-bar.animated {
+	animation: loadbar 6s;
+	-webkit-animation: loadbar 6s;
+}
+.single-chart .circle.animated {
 	animation: progress 6s ease-out forwards;
 }
-  .animated {
+.animated {
 	visibility: visible;
 
 	-webkit-animation-fill-mode: both;
@@ -2042,24 +2070,14 @@ a.menu-btn {
 	-ms-animation-play-state: running;
 	-o-animation-play-state: running;
 	animation-play-state: running;
-  }
+}
 
-  #google_translate_element  .goog-te-combo {
-	display: block;
-    max-width: 80%;
-	margin: 0 auto;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  }
-  .skiptranslate iframe {
-	  /* display: none; */
-  }
+#nguyentopBar.active {
+	background-color: #2c5eb7!important;
+}
+#nguyentopBar.active  .navbar-brand {
+	background-image: none;
+	animation: none;
+	-webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
