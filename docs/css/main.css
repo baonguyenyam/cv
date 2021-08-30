@@ -1407,13 +1407,13 @@ body {
 	padding-top: 56px;
 	top: initial !important;
 }
-body * {
-	/* -webkit-touch-callout: none;
+#openmenu * {
+	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none; */
+	user-select: none;
 }
 @media (min-width: 992px) {
 	body {
